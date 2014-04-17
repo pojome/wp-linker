@@ -28,6 +28,11 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
+define( 'LINKER__FILE__', __FILE__ );
+define( 'LINKER_BASE', plugin_basename( LINKER__FILE__ ) );
+
+include( 'classes/maintenance.php' );
+include( 'classes/class-linker-cpt.php' );
 
 final class Linker_Main {
 
@@ -36,6 +41,12 @@ final class Linker_Main {
 	 * @since 1.0.0
 	 */
 	private static $_instance = null;
+
+	/**
+	 * @var Linker_CPT
+	 * @since 1.0.0
+	 */
+	public $cpt;
 
 	public function load_textdomain() {
 		load_plugin_textdomain( 'linker', false, basename( dirname( __FILE__ ) ) . '/language' );
@@ -76,6 +87,8 @@ final class Linker_Main {
 	}
 	
 	private function __construct() {
+		$this->cpt = new Linker_CPT();
+		
 		add_action( 'plugins_loaded', array( &$this, 'load_textdomain' ) );
 	}
 	
