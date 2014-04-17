@@ -6,17 +6,17 @@ class Linker_CPT {
 	public function register_post_type() {
 		$labels = array(
 			'name'               => __( 'Linker', 'linker' ),
-			'singular_name'      => __( 'URL', 'linker' ),
+			'singular_name'      => __( 'Link', 'linker' ),
 			'add_new'            => __( 'Add New', 'linker' ),
-			'add_new_item'       => __( 'Add New URL', 'linker' ),
+			'add_new_item'       => __( 'Add New Link', 'linker' ),
 			'edit'               => __( 'Edit', 'linker' ),
-			'edit_item'          => __( 'Edit URL', 'linker' ),
-			'new_item'           => __( 'New URL', 'linker' ),
-			'view'               => __( 'View URL', 'linker' ),
-			'view_item'          => __( 'View URL', 'linker' ),
-			'search_items'       => __( 'Search URL', 'linker' ),
-			'not_found'          => __( 'No URLs found', 'linker' ),
-			'not_found_in_trash' => __( 'No URLs found in Trash', 'linker' ),
+			'edit_item'          => __( 'Edit Link', 'linker' ),
+			'new_item'           => __( 'New Link', 'linker' ),
+			'view'               => __( 'View Link', 'linker' ),
+			'view_item'          => __( 'View Link', 'linker' ),
+			'search_items'       => __( 'Search Link', 'linker' ),
+			'not_found'          => __( 'No Links found', 'linker' ),
+			'not_found_in_trash' => __( 'No Links found in Trash', 'linker' ),
 		);
 
 		$args = array(
@@ -71,7 +71,7 @@ class Linker_CPT {
 	public function register_meta_box() {
 		add_meta_box(
 			'linker-url-information',
-			__( 'URL Information', 'linker' ),
+			__( 'Link Info', 'linker' ),
 			array( &$this, 'render_meta_box' ),
 			'linker',
 			'normal',
@@ -84,14 +84,14 @@ class Linker_CPT {
 		
 		$field_id = '_linker_redirect';
 		echo strtr( '<p><strong><label for="{name}">{label}</label></strong></p><p><input type="url" id="{name}" name="{name}" value="{value}" placeholder="{placeholder}" class="large-text" /></p>', array(
-			'{label}' => __( 'Redirect URI:', 'linker' ),
+			'{label}' => __( 'Redirect Link:', 'linker' ),
 			'{name}'  => $field_id,
-			'{placeholder}' => __( 'http://example.com/your-link', 'linker' ),
+			'{placeholder}' => __( 'http://your-link.com/', 'linker' ),
 			'{value}' => esc_attr( get_post_meta( $post->ID, $field_id, true ) ),
 		) );
 
 		$counter = absint( get_post_meta( $post->ID, '_linker_count', true ) );
-		printf( '<p class="description">' . __( 'This URL has been accessed <strong>%d</strong> times.', 'linker' ) . '</p>', $counter );
+		printf( '<p class="description">' . __( 'This Link has been accessed <strong>%d</strong> times.', 'linker' ) . '</p>', $counter );
 	}
 
 	public function save_post( $post_id ) {
