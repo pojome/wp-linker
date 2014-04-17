@@ -39,6 +39,35 @@ class Linker_CPT {
 		);
 	}
 
+	public function admin_cpt_columns( $columns ) {
+		return array(
+			'cb'               => '<input type="checkbox" />',
+			'title'            => __( 'Title', 'linker' ),
+			'linker_url'       => __( 'Redirect to', 'linker' ),
+			'linker_permalink' => __( 'Permalink', 'linker' ),
+			'linker_clicks'    => __( 'Clicks', 'linker' ),
+			'date'             => __( 'Date', 'linker' ),
+		);
+	}
+
+	public function custom_columns( $column ) {
+		global $post;
+
+		switch ( $column ) {
+			case 'linker_url' :
+				echo make_clickable( get_permalink( $post->ID ) );
+				break;
+			
+			case 'linker_permalink' :
+				echo make_clickable( get_post_meta( $post->ID, '_linker_redirect', true ) );
+				break;
+			
+			case 'linker_clicks' :
+				echo absint( get_post_meta( $post->ID, '_linker_count', true ) );
+				break;
+		}
+	}
+
 	public function register_meta_box() {
 		add_meta_box(
 			'linker-url-information',
@@ -106,6 +135,8 @@ class Linker_CPT {
 		
 		add_action( 'init', array( &$this, 'register_post_type' ) );
 		add_action( 'admin_menu', array( &$this, 'register_meta_box' ) );
+		add_filter( 'manage_edit-linker_columns', array( &$this, 'admin_cpt_columns' ) );
+		add_action( 'manage_posts_custom_column', array( &$this, 'custom_columns' ) );
 		add_action( 'save_post', array( &$this, 'save_post' ) );
 		add_action( 'template_redirect', array( &$this, 'count_and_redirect' ) );
 	}
