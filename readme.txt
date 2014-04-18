@@ -6,12 +6,12 @@ Tested up to: 3.9
 Stable tag: 1.0.0
 License: GPLv2 or later
 
-Manage, create and tracking outbound links with add custom links.
+Manage, create and tracking outbound links with custom pretty links.
 
 == Description ==
 
 <h4>Integration with Google Analytics</h4>
-This plagin work well with [Google Analytics fo WordPress](wordpress.org/plugins/google-analytics-for-wordpress/) by Yoast.
+This plagin work well with [Google Analytics for WordPress](wordpress.org/plugins/google-analytics-for-wordpress/) by Yoast, get full statistic with Event Tracking.
 you can read more in [this article](https://yoast.com/affiliate-links-and-seo/)
 
 This base on [Simple URL](http://wordpress.org/plugins/simple-urls/) plugin - so thank you so much!
