@@ -78,6 +78,7 @@ final class Linker_Main {
 	}
 
 	/**
+	 * @since 1.0.0
 	 * @return Linker_Main
 	 */
 	public static function instance() {

@@ -2,7 +2,7 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 class Linker_CPT {
-	
+
 	public function register_post_type() {
 		$labels = array(
 			'name'               => __( 'Linker', 'linker' ),
@@ -55,11 +55,11 @@ class Linker_CPT {
 
 		switch ( $column ) {
 			case 'linker_url' :
-				echo make_clickable( get_permalink( $post->ID ) );
+				echo make_clickable( get_post_meta( $post->ID, '_linker_redirect', true ) );
 				break;
 			
 			case 'linker_permalink' :
-				echo make_clickable( get_post_meta( $post->ID, '_linker_redirect', true ) );
+				echo make_clickable( get_permalink( $post->ID ) );
 				break;
 			
 			case 'linker_clicks' :
