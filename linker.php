@@ -2,7 +2,7 @@
 /*
 Plugin Name: Linker
 Plugin URI: http://wordpress.org/plugins/linker/
-Description: ...
+Description: This is our version for [Simple URL](http://wordpress.org/plugins/simple-urls/) plugin - so thank you so much!
 Author: Yakir Sitbon, Ariel Klikstein
 Author URI: http://pojo.me/
 Version: 1.0.0
