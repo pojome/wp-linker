@@ -6,6 +6,7 @@ Tested up to: 3.9
 Stable tag: 1.0.0
 License: GPLv2 or later
 
+Manage, create and tracking outbound links with add custom links.
 
 == Description ==
 
