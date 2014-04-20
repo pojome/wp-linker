@@ -19,7 +19,7 @@ Linker is tracking click counts and save them of a custom field on that custom p
 <h4>Integration with Google Analytics</h4>
 You can track with Google Analytics to get full statistics by Event Tracking.
 
- This plagin work well too with [Google Analytics for WordPress](wordpress.org/plugins/google-analytics-for-wordpress/) by Yoast. 
+ This plagin work well too with [Google Analytics for WordPress](http://wordpress.org/plugins/google-analytics-for-wordpress/) by Yoast. 
 
 Go to the Setting Page of Google Analytics under the Setting Menu, and go to > Internal Links to Track as Outbound  > enter "/go/" in the field > choose Label to use.
 
