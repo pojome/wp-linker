@@ -109,6 +109,9 @@ class Linker_CPT {
 			#adminmenu #menu-posts-linker div.wp-menu-image:before {
 				content: "\f103";
 			}
+			.fixed .column-linker_clicks {
+				width: 10%;
+			}
 		</style>
 	<?php
 	}
