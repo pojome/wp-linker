@@ -79,6 +79,16 @@ class Linker_CPT {
 		);
 	}
 
+	public function admin_header() {
+		// TODO: move to a separate file.
+		?><style>
+			#adminmenu #menu-posts-linker div.wp-menu-image:before {
+				content: "\f103";
+			}
+		</style>
+	<?php
+	}
+
 	public function render_meta_box( $post ) {
 		wp_nonce_field( basename( __FILE__ ), '_linker_meta_box_nonce' );
 		
@@ -135,6 +145,7 @@ class Linker_CPT {
 		
 		add_action( 'init', array( &$this, 'register_post_type' ) );
 		add_action( 'admin_menu', array( &$this, 'register_meta_box' ) );
+		add_action( 'admin_head', array( &$this, 'admin_header' ) );
 		add_filter( 'manage_edit-linker_columns', array( &$this, 'admin_cpt_columns' ) );
 		add_action( 'manage_posts_custom_column', array( &$this, 'custom_columns' ) );
 		add_action( 'save_post', array( &$this, 'save_post' ) );
