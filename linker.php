@@ -2,7 +2,7 @@
 /*
 Plugin Name: Linker
 Plugin URI: http://wordpress.org/plugins/linker/
-Description: This is our version for [Simple URL](http://wordpress.org/plugins/simple-urls/) plugin - so thank you so much!
+Description: Manage, create and track outbound links by custom pretty links with your domain.
 Author: Yakir Sitbon, Ariel Klikstein
 Author URI: http://pojo.me/
 Version: 1.0.0
