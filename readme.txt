@@ -35,8 +35,9 @@ Would you like to like to contribute to Linker? You are more than welcome to sub
 
 1. Upload plugin files to your plugins folder or install using WordPress built-in Add New Plugin installer
 1. Activate the plugin
+1. Navigate to Settings > Permalinks and save them. Yes, just click Save Changes.
 1. Go to the Linker Menu under the Pages
-1. Create a new Link
+1. Create a new Link and publish
 1. Now you can track how many times clicked on each link
 
 == Screenshots ==
