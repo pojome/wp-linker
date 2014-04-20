@@ -6,7 +6,7 @@ Tested up to: 3.9
 Stable tag: 1.0.0
 License: GPLv2 or later
 
-Manage, create and tracking outbound links with custom pretty links.
+Manage, create and track outbound links by custom pretty links with your domain. e.g. http://your-domain.com/go/facebook-link
 
 == Description ==
 
@@ -14,7 +14,7 @@ Manage, create and tracking outbound links with custom pretty links.
 This plagin work well with [Google Analytics for WordPress](wordpress.org/plugins/google-analytics-for-wordpress/) by Yoast, get full statistic with Event Tracking.
 you can read more in [this article](https://yoast.com/affiliate-links-and-seo/)
 
-This base on [Simple URL](http://wordpress.org/plugins/simple-urls/) plugin - so thank you so much!
+This plugin base on [Simple URL](http://wordpress.org/plugins/simple-urls/) plugin - so thank you so much!
 
 == Installation ==
 
