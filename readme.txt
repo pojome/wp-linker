@@ -44,11 +44,11 @@ Would you like to like to contribute to Linker? You are more than welcome to sub
 
 == Frequently Asked Questions ==
 
-= Requirements =
-* __Requires PHP5__ for list management functionality.
-
 = Can I change the Link structure other than /go/ ? =
 * Sure. Just use with `linker_prefix_slug` filter.
+
+= Requirements =
+* __Requires PHP5__ for list management functionality.
 
 = What is the plugin license? =
 * This plugin is released under a GPL license.
