@@ -24,7 +24,7 @@ Go to the Setting Page of Google Analytics under the Setting Menu, and go to > I
 Now you can show up in Analytics all clicks out. go to Content > Event Tracking > Categories, and you’ll see your Label that used. that's all.
 
 <h4>Thanks</h4>
-We took inspiration to our plugin from [Simple URL](http://wordpress.org/plugins/simple-urls/) plugin - o thank you so much, you done good job.
+We took inspiration to our plugin from [Simple URL](http://wordpress.org/plugins/simple-urls/) plugin - so thank you so much, you done good job.
 
 == Installation ==
 
