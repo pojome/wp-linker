@@ -42,6 +42,9 @@ Would you like to like to contribute to Linker? You are more than welcome to sub
 
 == Screenshots ==
 
+1. New Link
+2. All Links
+
 == Frequently Asked Questions ==
 
 = Can I change the Link structure other than /go/ ? =

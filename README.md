@@ -37,19 +37,27 @@ Would you like to like to contribute to Linker? You are more than welcome to sub
 
 1. Upload plugin files to your plugins folder or install using WordPress built-in Add New Plugin installer
 1. Activate the plugin
+1. Navigate to Settings > Permalinks and save them. Yes, just click Save Changes.
 1. Go to the Linker Menu under the Pages
-1. Create a new Link
+1. Create a new Link and publish
 1. Now you can track how many times clicked on each link
 
 ## Screenshots ##
 
-## Frequently Asked Questions ##
+### 1. New Link ###
+![New Link](http://s.wordpress.org/extend/plugins/linker/screenshot-1.png)
 
-### Requirements ###
-* __Requires PHP5__ for list management functionality.
+### 2. All Links ###
+![All Links](http://s.wordpress.org/extend/plugins/linker/screenshot-2.png)
+
+
+## Frequently Asked Questions ##
 
 ### Can I change the Link structure other than /go/ ? ###
 * Sure. Just use with `linker_prefix_slug` filter.
+
+### Requirements ###
+* __Requires PHP5__ for list management functionality.
 
 ### What is the plugin license? ###
 * This plugin is released under a GPL license.
