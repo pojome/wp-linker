@@ -1,4 +1,56 @@
-Linker
-============
+# Linker #
+[![Dependency Status](https://david-dm.org/KingYes/wp-linker/dev-status.svg)](https://david-dm.org/KingYes/wp-linker#info=devDependencies) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
-This plugin is a work in progress and not yet ready for public use.
+**Contributors:** KingYes, ariel.k  
+Tags: 
+**Requires at least:** 3.5  
+**Tested up to:** 3.9  
+**Stable tag:** 1.0.0  
+**License:** GPLv2 or later  
+
+Manage, create and track outbound links by custom pretty links with your domain. e.g. http://your-domain.com/go/facebook-link
+
+## Description ##
+
+Linker is a simple & easy plugin to manage, create and track outbound links from your website. Linker adds a new custom post type to your Admin menu, where you can create, edit, delete, and manage Links by 301 redirects.
+
+Linker is tracking click counts and save them of a custom field on that custom post type, it really simple & cool. 
+
+<h4>Integration with Google Analytics</h4>
+You can track with Google Analytics to get full statistics by Event Tracking.
+
+ This plagin work well too with [Google Analytics for WordPress](wordpress.org/plugins/google-analytics-for-wordpress/) by Yoast. 
+
+Go to the Setting Page of Google Analytics under the Setting Menu, and go to > Internal Links to Track as Outbound  > enter "/go/" in the field > choose Label to use.
+
+Now you can show up in Analytics all clicks out. go to Content > Event Tracking > Categories, and you’ll see your Label that used. that's all.
+
+<h4>Thanks</h4>
+We took inspiration to our plugin from [Simple URL](http://wordpress.org/plugins/simple-urls/) plugin - so thank you so much, you done good job.
+
+## Installation ##
+
+1. Upload plugin files to your plugins folder or install using WordPress built-in Add New Plugin installer
+1. Activate the plugin
+1. Go to the Linker Menu under the Pages
+1. Create a new Link
+1. Now you can track how many times clicked on each link
+
+## Screenshots ##
+
+## Frequently Asked Questions ##
+
+### Requirements ###
+* __Requires PHP5__ for list management functionality.
+
+### Can I change the URL structure other than /go/ ? ###
+* Sure. Just use with `linker_prefix_slug` filter.
+
+### What is the plugin license? ###
+* This plugin is released under a GPL license.
+
+
+## Changelog ##
+
+### 1.0.0 ###
+* Blastoff!
