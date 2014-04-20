@@ -26,6 +26,11 @@ Now you can show up in Analytics all clicks out. go to Content > Event Tracking 
 <h4>Thanks</h4>
 We took inspiration to our plugin from [Simple URL](http://wordpress.org/plugins/simple-urls/) plugin - so thank you so much, you done good job.
 
+<strong>Contributions:</strong><br />
+
+Would you like to like to contribute to Linker? You are more than welcome to submit your pull requests on the [GitHub repo](https://github.com/KingYes/wp-linker). Also, if you have any notes about the code, please open a ticket on ths issue tracker.
+
+
 == Installation ==
 
 1. Upload plugin files to your plugins folder or install using WordPress built-in Add New Plugin installer

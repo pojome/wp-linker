@@ -62,6 +62,13 @@ class Linker_CPT {
 		return $messages;
 	}
 
+	public function plugin_action_links( $links ) {
+		$settings_link = sprintf( '<a href="%s" target="_blank">%s</a>', 'https://github.com/KingYes/wp-linker', __( 'GitHub', 'linker' ) );
+		array_unshift( $links, $settings_link );
+
+		return $links;
+	}
+
 	public function admin_cpt_columns( $columns ) {
 		return array(
 			'cb'               => '<input type="checkbox" />',
@@ -173,6 +180,8 @@ class Linker_CPT {
 		add_action( 'init', array( &$this, 'register_post_type' ) );
 		add_action( 'admin_menu', array( &$this, 'register_meta_box' ) );
 		add_action( 'admin_head', array( &$this, 'admin_header' ) );
+		add_filter( 'plugin_action_links_' . LINKER_BASE, array( &$this, 'plugin_action_links' ) );
+		
 		add_filter( 'manage_edit-linker_columns', array( &$this, 'admin_cpt_columns' ) );
 		add_action( 'manage_posts_custom_column', array( &$this, 'custom_columns' ) );
 		add_action( 'save_post', array( &$this, 'save_post' ) );
