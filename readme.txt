@@ -42,7 +42,7 @@ We took inspiration to our plugin from [Simple URL](http://wordpress.org/plugins
 * __Requires PHP5__ for list management functionality.
 
 = Can I change the URL structure other than /go/ ? =
-* Yes, with filter - but we not recommend to do it. *
+* Sure. Just use with `linker_prefix_slug` filter.
 
 = What is the plugin license? =
 * This plugin is released under a GPL license.
