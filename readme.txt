@@ -1,12 +1,12 @@
 === Linker ===
 Contributors: KingYes, ariel.k
-Tags: 
+Tags: click tracking, custom post types, redirect, 301, outbound links, pretty links, link manager, links, google analytics, affiliates, external links,
 Requires at least: 3.5
 Tested up to: 3.9
 Stable tag: 1.0.0
 License: GPLv2 or later
 
-Manage, create and track outbound links by custom pretty links with your domain. e.g. http://your-domain.com/go/facebook-link
+Manage, create and track outbound links by custom pretty links with your domain. e.g. your-domain.com/go/fb-link
 
 == Description ==
 
