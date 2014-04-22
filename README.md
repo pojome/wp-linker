@@ -14,12 +14,12 @@ Manage, create and track outbound links by custom pretty links with your domain.
 
 Linker is a simple & easy plugin to manage, create and track outbound links from your website. Linker adds a new custom post type to your Admin menu, where you can create, edit, delete, and manage Links by 301 redirects.
 
-Linker is tracking click counts and save them of a custom field on that custom post type, it really simple & cool. 
+Linker is tracking click counts and save them of a custom field on that custom post type, it really simple & cool.
 
 <h4>Integration with Google Analytics</h4>
 You can track with Google Analytics to get full statistics by Event Tracking.
 
- This plagin work well too with [Google Analytics for WordPress](http://wordpress.org/plugins/google-analytics-for-wordpress/) by Yoast. 
+ This plugin work well too with [Google Analytics for WordPress](http://wordpress.org/plugins/google-analytics-for-wordpress/) by Yoast.
 
 Go to the Setting Page of Google Analytics under the Setting Menu, and go to > Internal Links to Track as Outbound  > enter "/go/" in the field > choose Label to use.
 
