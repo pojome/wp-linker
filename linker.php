@@ -84,6 +84,7 @@ final class Linker_Main {
 	public static function instance() {
 		if ( is_null( self::$_instance ) )
 			self::$_instance = new Linker_Main();
+		
 		return self::$_instance;
 	}
 	
