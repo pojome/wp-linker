@@ -44,11 +44,11 @@ Would you like to like to contribute to Linker? You are more than welcome to sub
 
 ## Screenshots ##
 
-### 1. New Link ###
-![New Link](http://s.wordpress.org/extend/plugins/linker/screenshot-1.png)
+### 1. All Links ###
+![All Links](http://s.wordpress.org/extend/plugins/linker/screenshot-1.png)
 
-### 2. All Links ###
-![All Links](http://s.wordpress.org/extend/plugins/linker/screenshot-2.png)
+### 2. New Link ###
+![New Link](http://s.wordpress.org/extend/plugins/linker/screenshot-2.png)
 
 
 ## Frequently Asked Questions ##
