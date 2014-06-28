@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linker 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-19 09:08+0300\n"
+"POT-Creation-Date: 2014-06-28 22:27+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,6 +95,7 @@ msgstr ""
 msgid "Post scheduled for: <strong>%1$s</strong>."
 msgstr ""
 
+#. //php.net/date
 #: classes/class-linker-cpt.php:58
 msgid "M j, Y @ G:i"
 msgstr ""
