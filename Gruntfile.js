@@ -185,6 +185,17 @@ module.exports = function(grunt) {
 					build_dir: 'build/'
 				}
 			}
+		},
+
+		phpunit: {
+			classes: {
+				dir: ''
+			},
+			options: {
+				bin: 'phpunit',
+				bootstrap: 'tests/bootstrap.php',
+				colors: true
+			}
 		}
 		
 	} );
@@ -193,6 +204,7 @@ module.exports = function(grunt) {
 	grunt.registerTask( 'default', [
 		'checktextdomain',
 		'pot',
+		'phpunit',
 		'wp_readme_to_markdown'
 	] );
 
@@ -205,6 +217,7 @@ module.exports = function(grunt) {
 	grunt.registerTask( 'publish', [
 		'checktextdomain',
 		'pot',
+		'phpunit',
 		'bumpup',
 		'replace',
 		'wp_readme_to_markdown',
