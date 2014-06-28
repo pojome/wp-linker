@@ -62,7 +62,7 @@ Would you like to like to contribute to Linker? You are more than welcome to sub
 
 == Changelog ==
 
-= 1.0.0 =
+= 1.0.1 =
 * Added translate: Hebrew (he_IL) - Thanks to [Pojo.me](http://pojo.me/)
 
 = 1.0.0 =
