@@ -1,5 +1,5 @@
 === Linker ===
-Contributors: pojome, KingYes, ariel.k
+Contributors: pojo.me, KingYes, ariel.k
 Tags: click tracking, custom post types, redirect, 301, outbound links, pretty links, link manager, links, google analytics, affiliates, external links,
 Requires at least: 3.5
 Tested up to: 3.9
