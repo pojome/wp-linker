@@ -4,7 +4,7 @@
 **Contributors:** pojo.me, KingYes, ariel.k  
 **Tags:** click tracking, custom post types, redirect, 301, outbound links, pretty links, link manager, links, google analytics, affiliates, external links,  
 **Requires at least:** 3.5  
-**Tested up to:** 3.9  
+**Tested up to:** 4.0  
 **Stable tag:** 1.0.2  
 **License:** GPLv2 or later  
 
