@@ -1,11 +1,11 @@
 # Linker #
 [![Build Status](https://travis-ci.org/KingYes/wp-linker.svg?branch=master)](https://travis-ci.org/KingYes/wp-linker) [![Dependency Status](https://david-dm.org/KingYes/wp-linker/dev-status.svg)](https://david-dm.org/KingYes/wp-linker#info=devDependencies) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
-**Contributors:** pojome, KingYes, ariel.k  
+**Contributors:** pojo.me, KingYes, ariel.k  
 **Tags:** click tracking, custom post types, redirect, 301, outbound links, pretty links, link manager, links, google analytics, affiliates, external links,  
 **Requires at least:** 3.5  
 **Tested up to:** 3.9  
-**Stable tag:** 1.0.1  
+**Stable tag:** 1.0.2  
 **License:** GPLv2 or later  
 
 Manage, create and track outbound links by custom pretty links with your domain. e.g. your-domain.com/go/fb-link
@@ -67,6 +67,9 @@ Would you like to like to contribute to Linker? You are more than welcome to sub
 
 
 ## Changelog ##
+
+### 1.0.2 ###
+* Tested up to WordPress v4.0
 
 ### 1.0.1 ###
 * Added translate: Hebrew (he_IL) - Thanks to [Pojo.me](http://pojo.me/)

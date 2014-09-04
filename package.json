@@ -3,7 +3,7 @@
 	"slug": "linker",
 	"homepage": "http://pojo.me/",
 	"description": "Manage, create and track outbound links by custom pretty links with your domain.",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"devDependencies": {
 		"grunt": "~0.4.1",
 		"grunt-checktextdomain": "~0.1.1",
