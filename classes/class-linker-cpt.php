@@ -30,7 +30,7 @@ class Linker_CPT {
 			'supports'        => array( 'title', 'author' ),
 			'rewrite'         => array(
 				'slug'       => apply_filters( 'linker_prefix_slug', 'go' ),
-				'with_front' => false
+				'with_front' => false,
 			),
 		);
 		
