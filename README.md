@@ -4,7 +4,7 @@
 **Contributors:** pojo.me, KingYes, ariel.k  
 **Tags:** click tracking, custom post types, redirect, 301, outbound links, pretty links, link manager, links, google analytics, affiliates, external links,  
 **Requires at least:** 3.5  
-**Tested up to:** 4.1  
+**Tested up to:** 4.2  
 **Stable tag:** 1.0.3  
 **License:** GPLv2 or later  
 
@@ -67,6 +67,10 @@ Would you like to like to contribute to Linker? You are more than welcome to sub
 
 
 ## Changelog ##
+
+### 1.0.4 ###
+* The plugin flush the permalinks automation.
+* Tested up to WordPress v4.2
 
 ### 1.0.3 ###
 * Tested up to WordPress v4.1
