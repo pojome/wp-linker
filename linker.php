@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 define( 'LINKER__FILE__', __FILE__ );
 define( 'LINKER_BASE', plugin_basename( LINKER__FILE__ ) );
 
-include( 'classes/maintenance.php' );
+include( 'classes/class-linker-maintenance.php' );
 include( 'classes/class-linker-cpt.php' );
 
 final class Linker_Main {
