@@ -2,8 +2,8 @@
 Contributors: pojo.me, KingYes, ariel.k
 Tags: click tracking, custom post types, redirect, 301, outbound links, pretty links, link manager, links, google analytics, affiliates, external links,
 Requires at least: 3.5
-Tested up to: 4.2
-Stable tag: 1.0.4
+Tested up to: 4.2.2
+Stable tag: 1.0.5
 License: GPLv2 or later
 
 Manage, create and track outbound links by custom pretty links with your domain. e.g. your-domain.com/go/fb-link
@@ -25,6 +25,7 @@ Now you can show up in Analytics all clicks out. go to Content > Event Tracking 
 
 <h4>Translators:</h4>
 * Hebrew (he_IL) + RTL Support - [Pojo.me](http://pojo.me/)
+* Brazilian Portuguese (pt_BR) - Rhenan Cardozo
 
 <h4>Thanks</h4>
 We took inspiration to our plugin from [Simple URL](http://wordpress.org/plugins/simple-urls/) plugin - so thank you so much, you done good job.
@@ -61,6 +62,10 @@ Would you like to like to contribute to Linker? You are more than welcome to sub
 
 
 == Changelog ==
+
+= 1.0.5 =
+* Added translate: Brazilian Portuguese (pt_BR) Thanks to Rhenan Cardozo
+* Tested up to WordPress v4.2.2
 
 = 1.0.4 =
 * The plugin flush the permalinks automation.
