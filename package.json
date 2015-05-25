@@ -6,15 +6,15 @@
 	"version": "1.0.5",
 	"devDependencies": {
 		"grunt": "~0.4.1",
-		"grunt-checktextdomain": "~0.1.1",
+		"grunt-checktextdomain": "~1.0.0",
 		"grunt-pot": "~0.2.0",
 		"grunt-wp-readme-to-markdown-with-extra": "~0.6.0",
 		"grunt-phpunit": "~0.3.3",
 		"grunt-bumpup": "~0.6.2",
 		"grunt-shell": "~1.1.1",
 		"grunt-text-replace": "~0.4.0",
-		"grunt-release": "~0.10.0",
-		"grunt-contrib-copy": "~0.7.0",
+		"grunt-release": "~0.12.0",
+		"grunt-contrib-copy": "~0.8.0",
 		"grunt-contrib-clean": "~0.6.0",
 		"grunt-wp-deploy": "~1.0.3",
 		"matchdep": "~0.3.0"
