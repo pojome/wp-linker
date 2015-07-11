@@ -174,6 +174,64 @@ class Linker_CPT {
 		die();
 	}
 	
+	// Add Dashboard Widget for Linker
+	public function linker_add_dashboard_widget() {
+	
+		wp_add_dashboard_widget( 'linker_dashboard_widget', __( 'Linker Top 10 Clicks', 'link-click-monitor' ), array(
+			$this,
+			'linker_dashboard_widget_function'
+		) );	
+	}
+
+	// Add Dashboard Function for Linker
+	public function linker_dashboard_widget_function() {
+	
+		$posts = get_posts(array(
+		'post_type'   => 'linker',
+		'post_status' => 'publish',
+		'posts_per_page' => -1,
+		'fields' => 'ids',
+		'meta_key' => '_linker_count',
+		'orderby' => 'meta_value_num',
+		'order' => 'DESC',
+		'posts_per_page' => 10,
+		));
+		
+		if ( empty( $posts ) ) {
+			echo '<p>' . __( 'There are no stats available yet!', 'link-click-monitor' ) . '</p>';
+			return;
+		}
+		
+		?>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<thead>
+				<tr>
+					<th align="left" scope="col"><?php _e( 'Redirect to', "link-click-monitor" ); ?></th>
+                    <th align="left" scope="col"><?php _e( 'Edit', "link-click-monitor" ); ?></th>
+                    <th align="left" scope="col"><?php _e( 'Clicks', "link-click-monitor" ); ?></th>
+				</tr>
+			</thead>
+			<tbody>
+ 				<?php
+				//loop over each post
+				foreach($posts as $p){
+				//get the meta you need form each post
+				$link = get_post_meta($p,"_linker_redirect",true);
+				$link_count = get_post_meta($p,"_linker_count",true);
+				?>
+                <tr>
+					<td><a target="_blank" href="<?php echo $link;?>"><?php echo $link;?></a></td>
+                    <td><a href="/wp-admin/post.php?post=<?php echo $p;?>&action=edit">Edit</a></td>
+					<td><?php echo $link_count;?></td>
+				</tr>
+                <?php
+				}
+				?>
+			</tbody>
+		</table>
+        <?php
+	}
+	
 	public function __construct() {
 		// TODO: please add updated messages
 		
@@ -186,6 +244,9 @@ class Linker_CPT {
 		add_action( 'manage_posts_custom_column', array( &$this, 'custom_columns' ) );
 		add_action( 'save_post', array( &$this, 'save_post' ) );
 		add_action( 'template_redirect', array( &$this, 'count_and_redirect' ) );
+		
+		// Add Dashboard Widget for Linker
+		add_action( 'wp_dashboard_setup', array( &$this, 'linker_add_dashboard_widget' ));
 	}
 	
 }
