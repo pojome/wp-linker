@@ -232,6 +232,26 @@ class Linker_CPT {
         <?php
 	}
 	
+	// Add order by Clicks
+	public function sortable_linker_clicks_column( $columns ) {
+		$columns['linker_clicks'] = 'linker_clicks';
+	 
+		return $columns;
+	}
+	
+	// Add order by Clicks
+	public function clicks_orderby( $query ) {
+		if( ! is_admin() )
+			return;
+	 
+		$orderby = $query->get( 'orderby');
+	 
+		if( 'linker_clicks' == $orderby ) {
+			$query->set('meta_key','_linker_count');
+			$query->set('orderby','meta_value_num');
+		}
+	}
+	
 	public function __construct() {
 		// TODO: please add updated messages
 		
@@ -247,6 +267,10 @@ class Linker_CPT {
 		
 		// Add Dashboard Widget for Linker
 		add_action( 'wp_dashboard_setup', array( &$this, 'linker_add_dashboard_widget' ));
+		
+		// Add order by Clicks
+		add_action( 'pre_get_posts', array( &$this, 'clicks_orderby' ) );
+		add_filter( 'manage_edit-linker_sortable_columns', array( &$this, 'sortable_linker_clicks_column' ) );
 	}
 	
 }
