@@ -215,13 +215,13 @@ class Linker_CPT {
  				<?php
 				//loop over each post
 				foreach($posts as $p){
-				//get the meta you need form each post
+				//get the meta you need from each post
 				$link = get_post_meta($p,"_linker_redirect",true);
 				$link_count = get_post_meta($p,"_linker_count",true);
 				?>
                 <tr>
 					<td><a target="_blank" href="<?php echo $link;?>"><?php echo $link;?></a></td>
-                    <td><a href="/wp-admin/post.php?post=<?php echo $p;?>&action=edit">Edit</a></td>
+                    <td><a href="<?php echo admin_url();?>post.php?post=<?php echo $p;?>&action=edit">Edit</a></td>
 					<td><?php echo $link_count;?></td>
 				</tr>
                 <?php
