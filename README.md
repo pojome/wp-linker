@@ -69,6 +69,10 @@ Would you like to like to contribute to Linker? You are more than welcome to sub
 
 ## Changelog ##
 
+
+### 1.0.6 ###
+* Added Dashboard Widget and Orderby clicks [#13](https://github.com/KingYes/wp-linker/pull/13).
+
 ### 1.0.5 ###
 * Added translate: Brazilian Portuguese (pt_BR) Thanks to Rhenan Cardozo
 * Tested up to WordPress v4.2.2

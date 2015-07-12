@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linker 1.0.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-25 15:43+0300\n"
+"POT-Creation-Date: 2015-07-12 16:31+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,7 +33,8 @@ msgstr ""
 msgid "Add New Link"
 msgstr ""
 
-#: classes/class-linker-cpt.php:12
+#: classes/class-linker-cpt.php:12 classes/class-linker-cpt.php:213
+#: classes/class-linker-cpt.php:227
 msgid "Edit"
 msgstr ""
 
@@ -112,7 +113,7 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: classes/class-linker-cpt.php:76
+#: classes/class-linker-cpt.php:76 classes/class-linker-cpt.php:212
 msgid "Redirect to"
 msgstr ""
 
@@ -120,7 +121,7 @@ msgstr ""
 msgid "Permalink"
 msgstr ""
 
-#: classes/class-linker-cpt.php:78
+#: classes/class-linker-cpt.php:78 classes/class-linker-cpt.php:214
 msgid "Clicks"
 msgstr ""
 
@@ -147,6 +148,14 @@ msgstr ""
 #: classes/class-linker-cpt.php:138
 #, php-format
 msgid "This Link has been accessed <strong>%d</strong> times."
+msgstr ""
+
+#: classes/class-linker-cpt.php:183
+msgid "Linker Top 10 Clicks"
+msgstr ""
+
+#: classes/class-linker-cpt.php:205
+msgid "There are no stats available yet!"
 msgstr ""
 
 #: linker.php:66 linker.php:77
