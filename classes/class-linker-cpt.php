@@ -173,82 +173,93 @@ class Linker_CPT {
 		
 		die();
 	}
-	
-	// Add Dashboard Widget for Linker
+
+	/**
+	 * Add Dashboard Widget for Linker
+	 */
 	public function linker_add_dashboard_widget() {
-	
-		wp_add_dashboard_widget( 'linker_dashboard_widget', __( 'Linker Top 10 Clicks', 'link-click-monitor' ), array(
-			$this,
-			'linker_dashboard_widget_function'
-		) );	
+		wp_add_dashboard_widget(
+			'linker_dashboard_widget',
+			__( 'Linker Top 10 Clicks', 'linker' ),
+			array( &$this, 'linker_dashboard_widget_function' )
+		);	
 	}
 
-	// Add Dashboard Function for Linker
+	/**
+	 * Add Dashboard Function for Linker
+	 */
 	public function linker_dashboard_widget_function() {
-	
-		$posts = get_posts(array(
-		'post_type'   => 'linker',
-		'post_status' => 'publish',
-		'posts_per_page' => -1,
-		'fields' => 'ids',
-		'meta_key' => '_linker_count',
-		'orderby' => 'meta_value_num',
-		'order' => 'DESC',
-		'posts_per_page' => 10,
-		));
+		$posts = get_posts(
+			array(
+				'post_type' => 'linker',
+				'post_status' => 'publish',
+				'fields' => 'ids',
+				'meta_key' => '_linker_count',
+				'orderby' => 'meta_value_num',
+				'order' => 'DESC',
+				'posts_per_page' => 10,
+			)
+		);
 		
 		if ( empty( $posts ) ) {
-			echo '<p>' . __( 'There are no stats available yet!', 'link-click-monitor' ) . '</p>';
+			echo '<p>' . __( 'There are no stats available yet!', 'linker' ) . '</p>';
 			return;
 		}
-		
 		?>
 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
 			<thead>
-				<tr>
-					<th align="left" scope="col"><?php _e( 'Redirect to', "link-click-monitor" ); ?></th>
-                    <th align="left" scope="col"><?php _e( 'Edit', "link-click-monitor" ); ?></th>
-                    <th align="left" scope="col"><?php _e( 'Clicks', "link-click-monitor" ); ?></th>
-				</tr>
+			<tr>
+				<th scope="col"><?php _e( 'Redirect to', 'linker' ); ?></th>
+				<th scope="col"><?php _e( 'Edit', 'linker' ); ?></th>
+				<th scope="col"><?php _e( 'Clicks', 'linker' ); ?></th>
+			</tr>
 			</thead>
 			<tbody>
- 				<?php
-				//loop over each post
-				foreach($posts as $p){
-				//get the meta you need from each post
-				$link = get_post_meta($p,"_linker_redirect",true);
-				$link_count = get_post_meta($p,"_linker_count",true);
+			<?php
+			//loop over each post
+			foreach ( $posts as $post_id ) :
+				// Get the meta you need from each post
+				$link       = get_post_meta( $post_id, '_linker_redirect', true );
+				$link_count = absint( get_post_meta( $post_id, '_linker_count', true ) );
 				?>
-                <tr>
-					<td><a target="_blank" href="<?php echo $link;?>"><?php echo $link;?></a></td>
-                    <td><a href="<?php echo admin_url();?>post.php?post=<?php echo $p;?>&action=edit">Edit</a></td>
-					<td><?php echo $link_count;?></td>
+				<tr align="center">
+					<td><a target="_blank" href="<?php echo $link; ?>"><?php echo $link; ?></a></td>
+					<td><a href="<?php echo get_edit_post_link( $post_id ); ?>"><?php _e( 'Edit', 'linker' ); ?></a></td>
+					<td><?php echo $link_count; ?></td>
 				</tr>
-                <?php
-				}
-				?>
+			<?php endforeach; ?>
 			</tbody>
 		</table>
-        <?php
+		<?php
 	}
-	
-	// Add order by Clicks
+
+	/**
+	 * Add order by Clicks
+	 * 
+	 * @param array $columns
+	 *
+	 * @return array
+	 */
 	public function sortable_linker_clicks_column( $columns ) {
 		$columns['linker_clicks'] = 'linker_clicks';
-	 
+
 		return $columns;
 	}
-	
-	// Add order by Clicks
+
+	/**
+	 * Add order by Clicks
+	 * 
+	 * @param WP_Query $query
+	 */
 	public function clicks_orderby( $query ) {
-		if( ! is_admin() )
+		if ( ! is_admin() )
 			return;
-	 
-		$orderby = $query->get( 'orderby');
-	 
-		if( 'linker_clicks' == $orderby ) {
-			$query->set('meta_key','_linker_count');
-			$query->set('orderby','meta_value_num');
+
+		$orderby = $query->get( 'orderby' );
+
+		if ( 'linker_clicks' == $orderby ) {
+			$query->set( 'meta_key', '_linker_count' );
+			$query->set( 'orderby', 'meta_value_num' );
 		}
 	}
 	
