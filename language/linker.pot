@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linker 1.0.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-12 16:32+0300\n"
+"POT-Creation-Date: 2015-07-12 16:58+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -151,7 +151,7 @@ msgid "This Link has been accessed <strong>%d</strong> times."
 msgstr ""
 
 #: classes/class-linker-cpt.php:183
-msgid "Linker Top 10 Clicks"
+msgid "Linker - Top 10"
 msgstr ""
 
 #: classes/class-linker-cpt.php:205
