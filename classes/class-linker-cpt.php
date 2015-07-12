@@ -180,7 +180,7 @@ class Linker_CPT {
 	public function linker_add_dashboard_widget() {
 		wp_add_dashboard_widget(
 			'linker_dashboard_widget',
-			__( 'Linker Top 10 Clicks', 'linker' ),
+			__( 'Linker - Top 10', 'linker' ),
 			array( &$this, 'linker_dashboard_widget_function' )
 		);	
 	}
@@ -208,7 +208,7 @@ class Linker_CPT {
 		?>
 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
 			<thead>
-			<tr>
+			<tr align="<?php echo is_rtl() ? 'right' : 'left'; ?>">
 				<th scope="col"><?php _e( 'Redirect to', 'linker' ); ?></th>
 				<th scope="col"><?php _e( 'Edit', 'linker' ); ?></th>
 				<th scope="col"><?php _e( 'Clicks', 'linker' ); ?></th>
@@ -222,7 +222,7 @@ class Linker_CPT {
 				$link       = get_post_meta( $post_id, '_linker_redirect', true );
 				$link_count = absint( get_post_meta( $post_id, '_linker_count', true ) );
 				?>
-				<tr align="center">
+				<tr>
 					<td><a target="_blank" href="<?php echo $link; ?>"><?php echo $link; ?></a></td>
 					<td><a href="<?php echo get_edit_post_link( $post_id ); ?>"><?php _e( 'Edit', 'linker' ); ?></a></td>
 					<td><?php echo $link_count; ?></td>
