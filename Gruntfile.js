@@ -15,6 +15,7 @@ module.exports = function(grunt) {
 			standard: {
 				options:{
 					text_domain: 'linker',
+					correct_domain: true,
 					keywords: [
 						// WordPress keywords
 						'__:1,2d',
