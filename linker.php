@@ -97,5 +97,3 @@ final class Linker_Main {
 }
 
 Linker_Main::instance();
-
-// EOF
