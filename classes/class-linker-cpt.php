@@ -110,23 +110,6 @@ class Linker_CPT {
 		);
 	}
 
-	public function admin_header() {
-		// TODO: move to a separate file.
-		?><style>
-			#adminmenu #menu-posts-linker div.wp-menu-image:before {
-				content: "\f103";
-			}
-			.fixed .column-linker_clicks {
-				width: 10%;
-			}
-			#linker_dashboard_widget tr td.border-bottom {
-				padding: 4px 0 4px 0;
-				border-bottom:1pt solid #dddddd;
-			}
-		</style>
-	<?php
-	}
-
 	public function render_meta_box( $post ) {
 		wp_nonce_field( basename( __FILE__ ), '_linker_meta_box_nonce' );
 		
@@ -177,35 +160,38 @@ class Linker_CPT {
 		
 		die();
 	}
-	
-	// Add Dashboard Widget for Linker
+
+	/**
+	 * Add Dashboard Widget for Linker
+	 */
 	public function linker_add_dashboard_widget() {
-	
-		wp_add_dashboard_widget( 'linker_dashboard_widget', __( 'Linker Top 10 Clicks', 'link-click-monitor' ), array(
-			$this,
-			'linker_dashboard_widget_function'
-		) );	
+		wp_add_dashboard_widget(
+			'linker_dashboard_widget',
+			__( 'Linker - Top 10', 'linker' ),
+			array( &$this, 'linker_dashboard_widget_function' )
+		);	
 	}
 
-	// Add Dashboard Function for Linker
+	/**
+	 * Add Dashboard Function for Linker
+	 */
 	public function linker_dashboard_widget_function() {
-	
-		$posts = get_posts(array(
-		'post_type'   => 'linker',
-		'post_status' => 'publish',
-		'posts_per_page' => -1,
-		'fields' => 'ids',
-		'meta_key' => '_linker_count',
-		'orderby' => 'meta_value_num',
-		'order' => 'DESC',
-		'posts_per_page' => 10,
-		));
+		$posts = get_posts(
+			array(
+				'post_type' => 'linker',
+				'post_status' => 'publish',
+				'fields' => 'ids',
+				'meta_key' => '_linker_count',
+				'orderby' => 'meta_value_num',
+				'order' => 'DESC',
+				'posts_per_page' => 10,
+			)
+		);
 		
 		if ( empty( $posts ) ) {
-			echo '<p>' . __( 'There are no stats available yet!', 'link-click-monitor' ) . '</p>';
+			echo '<p>' . __( 'There are no stats available yet!', 'linker' ) . '</p>';
 			return;
 		}
-		
 		?>
 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
 			<thead>
@@ -231,26 +217,36 @@ class Linker_CPT {
 			<?php endforeach; ?>
 			</tbody>
 		</table>
-        <?php
+		<?php
 	}
-	
-	// Add order by Clicks
+
+	/**
+	 * Add order by Clicks
+	 * 
+	 * @param array $columns
+	 *
+	 * @return array
+	 */
 	public function sortable_linker_clicks_column( $columns ) {
 		$columns['linker_clicks'] = 'linker_clicks';
-	 
+
 		return $columns;
 	}
-	
-	// Add order by Clicks
+
+	/**
+	 * Add order by Clicks
+	 * 
+	 * @param WP_Query $query
+	 */
 	public function clicks_orderby( $query ) {
-		if( ! is_admin() )
+		if ( ! is_admin() )
 			return;
-	 
-		$orderby = $query->get( 'orderby');
-	 
-		if( 'linker_clicks' == $orderby ) {
-			$query->set('meta_key','_linker_count');
-			$query->set('orderby','meta_value_num');
+
+		$orderby = $query->get( 'orderby' );
+
+		if ( 'linker_clicks' == $orderby ) {
+			$query->set( 'meta_key', '_linker_count' );
+			$query->set( 'orderby', 'meta_value_num' );
 		}
 	}
 	
@@ -267,12 +263,19 @@ class Linker_CPT {
             }
 	}
 	
+	// Add external CSS Stylesheet file
+	public function dashboard_widget_linker_external_css( $hook ) {
+		if( 'index.php' != $hook ) {
+			return;
+		}
+	wp_enqueue_style( 'dashboard-widget-styles', plugins_url( '', __FILE__ ) . '/linker-styles.css' );
+	}
+	
 	public function __construct() {
 		// TODO: please add updated messages
 		
 		add_action( 'init', array( &$this, 'register_post_type' ) );
 		add_action( 'admin_menu', array( &$this, 'register_meta_box' ) );
-		add_action( 'admin_head', array( &$this, 'admin_header' ) );
 		add_filter( 'plugin_action_links_' . LINKER_BASE, array( &$this, 'plugin_action_links' ) );
 		
 		add_filter( 'manage_edit-linker_columns', array( &$this, 'admin_cpt_columns' ) );
@@ -289,6 +292,9 @@ class Linker_CPT {
 		
 		// Add filter by Author
 		add_action('restrict_manage_posts', array( &$this, 'linker_filter_by_author') );
+		
+		// Add external CSS Stylesheet file
+		add_action( 'admin_enqueue_scripts', array( &$this, 'dashboard_widget_linker_external_css' ));
 	}
 	
 }

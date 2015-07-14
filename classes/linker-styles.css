@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* CSS Document */
+#adminmenu #menu-posts-linker div.wp-menu-image:before {
+	content: "\f103";
+}
+.fixed .column-linker_clicks {
+	width: 10%;
+}
+#linker_dashboard_widget tr td.border-bottom {
+	padding: 4px 0 4px 0;
+	border-bottom:1pt solid #dddddd;
+}
