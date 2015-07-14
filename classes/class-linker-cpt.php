@@ -119,6 +119,10 @@ class Linker_CPT {
 			.fixed .column-linker_clicks {
 				width: 10%;
 			}
+			#linker_dashboard_widget tr td.border-bottom {
+				padding: 4px 0 4px 0;
+				border-bottom:1pt solid #dddddd;
+			}
 		</style>
 	<?php
 	}
@@ -205,28 +209,26 @@ class Linker_CPT {
 		?>
 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
 			<thead>
-				<tr>
-					<th align="left" scope="col"><?php _e( 'Redirect to', "link-click-monitor" ); ?></th>
-                    <th align="left" scope="col"><?php _e( 'Edit', "link-click-monitor" ); ?></th>
-                    <th align="left" scope="col"><?php _e( 'Clicks', "link-click-monitor" ); ?></th>
-				</tr>
+			<tr align="<?php echo is_rtl() ? 'right' : 'left'; ?>">
+				<th scope="col"><?php _e( 'Redirect to', 'linker' ); ?></th>
+				<th scope="col"><?php _e( 'Edit', 'linker' ); ?></th>
+				<th scope="col"><?php _e( 'Clicks', 'linker' ); ?></th>
+			</tr>
 			</thead>
 			<tbody>
- 				<?php
-				//loop over each post
-				foreach($posts as $p){
-				//get the meta you need from each post
-				$link = get_post_meta($p,"_linker_redirect",true);
-				$link_count = get_post_meta($p,"_linker_count",true);
+			<?php
+			//loop over each post
+			foreach ( $posts as $post_id ) :
+				// Get the meta you need from each post
+				$link       = get_post_meta( $post_id, '_linker_redirect', true );
+				$link_count = absint( get_post_meta( $post_id, '_linker_count', true ) );
 				?>
-                <tr>
-					<td><a target="_blank" href="<?php echo $link;?>"><?php echo $link;?></a></td>
-                    <td><a href="<?php echo admin_url();?>post.php?post=<?php echo $p;?>&action=edit">Edit</a></td>
-					<td><?php echo $link_count;?></td>
+				<tr>
+					<td class="border-bottom" scope="row"><strong><?php echo get_the_title( $post_id ); ?></strong><br /><a target="_blank" href="<?php echo $link; ?>"><?php echo $link; ?></a></td>
+					<td class="border-bottom" scope="row"><a href="<?php echo get_edit_post_link( $post_id ); ?>"><?php _e( 'Edit', 'linker' ); ?></a></td>
+					<td class="border-bottom" scope="row"><?php echo $link_count; ?></td>
 				</tr>
-                <?php
-				}
-				?>
+			<?php endforeach; ?>
 			</tbody>
 		</table>
         <?php
