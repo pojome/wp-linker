@@ -252,6 +252,19 @@ class Linker_CPT {
 		}
 	}
 	
+	// Add filter by Author
+	public function linker_filter_by_author() {
+
+		global $typenow;
+            if ($typenow=='linker') {
+				$args = array('name' => 'author', 'show_option_all' => 'View all authors');
+				if (isset($_GET['user'])) {
+					$args['selected'] = $_GET['user'];
+				}
+				wp_dropdown_users($args);
+            }
+	}
+	
 	public function __construct() {
 		// TODO: please add updated messages
 		
@@ -271,6 +284,9 @@ class Linker_CPT {
 		// Add order by Clicks
 		add_action( 'pre_get_posts', array( &$this, 'clicks_orderby' ) );
 		add_filter( 'manage_edit-linker_sortable_columns', array( &$this, 'sortable_linker_clicks_column' ) );
+		
+		// Add filter by Author
+		add_action('restrict_manage_posts', array( &$this, 'linker_filter_by_author') );
 	}
 	
 }
