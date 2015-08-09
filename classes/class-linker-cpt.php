@@ -43,17 +43,17 @@ class Linker_CPT {
 		global $post;
 
 		$messages['linker'] = array(
-			0  => '', // Unused. Messages start at index 1.
-			1  => __( 'Link updated.', 'linker' ),
-			2  => __( 'Custom field updated.', 'linker' ),
-			3  => __( 'Custom field deleted.', 'linker' ),
-			4  => __( 'Link updated.', 'linker' ),
+			0 => '', // Unused. Messages start at index 1.
+			1 => __( 'Link updated.', 'linker' ),
+			2 => __( 'Custom field updated.', 'linker' ),
+			3 => __( 'Custom field deleted.', 'linker' ),
+			4 => __( 'Link updated.', 'linker' ),
 			/* translators: %s: date and time of the revision */
-			5  => isset( $_GET['revision'] ) ? sprintf( __( 'Link restored to revision from %s', 'linker' ), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
-			6  => __( 'Link published.', 'linker' ),
-			7  => __( 'Link saved.', 'linker' ),
-			8  => __( 'Link submitted.', 'linker' ),
-			9  => sprintf( __( 'Post scheduled for: <strong>%1$s</strong>.', 'linker' ),
+			5 => isset( $_GET['revision'] ) ? sprintf( __( 'Link restored to revision from %s', 'linker' ), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
+			6 => __( 'Link published.', 'linker' ),
+			7 => __( 'Link saved.', 'linker' ),
+			8 => __( 'Link submitted.', 'linker' ),
+			9 => sprintf( __( 'Post scheduled for: <strong>%1$s</strong>.', 'linker' ),
 				// translators: Publish box date format, see http://php.net/date
 				date_i18n( __( 'M j, Y @ G:i', 'linker' ), strtotime( $post->post_date ) ) ),
 			10 => __( 'Link draft updated.', 'linker' ),
@@ -280,9 +280,9 @@ class Linker_CPT {
 	}
 	
 	public function __construct() {
-		// TODO: please add updated messages
-
 		add_action( 'init', array( &$this, 'register_post_type' ) );
+		add_filter( 'post_updated_messages', array( &$this, 'post_updated_messages' ) );
+		
 		add_action( 'admin_menu', array( &$this, 'register_meta_box' ) );
 		add_filter( 'plugin_action_links_' . LINKER_BASE, array( &$this, 'plugin_action_links' ) );
 
