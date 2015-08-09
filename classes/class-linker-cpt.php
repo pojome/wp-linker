@@ -90,7 +90,7 @@ class Linker_CPT {
 				break;
 			
 			case 'linker_permalink' :
-				echo make_clickable( get_permalink( $post->ID ) );
+				echo '<input type="text" class="linker-permalink-copy-paste" value="' . esc_attr( get_permalink( $post->ID ) ) . '" readonly />';
 				break;
 			
 			case 'linker_clicks' :
@@ -272,9 +272,17 @@ class Linker_CPT {
 	 * @param $hook
 	 */
 	public function dashboard_widget_linker_external_css( $hook ) {
-		if ( 'index.php' !== $hook ) {
+		global $typenow;
+		
+		$include_style = false;
+		if ( 'index.php' === $hook )
+			$include_style = true;
+		
+		if ( 'edit.php' === $hook && 'linker' === $typenow )
+			$include_style = true;
+		
+		if ( ! $include_style )
 			return;
-		}
 		
 		wp_enqueue_style( 'linker-dashboard-widget-styles', LINKER_PLUGIN_URL . '/assets/css/styles.css' );
 	}

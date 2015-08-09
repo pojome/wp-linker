@@ -12,3 +12,11 @@
 	padding: 4px 0 4px 0;
 	border-bottom: 1pt solid #dddddd;
 }
+
+th#linker_permalink {
+	width: 30%;
+}
+
+input.linker-permalink-copy-paste {
+	width: 100%;
+}
