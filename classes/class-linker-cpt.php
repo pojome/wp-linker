@@ -110,19 +110,6 @@ class Linker_CPT {
 		);
 	}
 
-	public function admin_header() {
-		// TODO: move to a separate file.
-		?><style>
-			#adminmenu #menu-posts-linker div.wp-menu-image:before {
-				content: "\f103";
-			}
-			.fixed .column-linker_clicks {
-				width: 10%;
-			}
-		</style>
-	<?php
-	}
-
 	public function render_meta_box( $post ) {
 		wp_nonce_field( basename( __FILE__ ), '_linker_meta_box_nonce' );
 		
@@ -262,26 +249,60 @@ class Linker_CPT {
 			$query->set( 'orderby', 'meta_value_num' );
 		}
 	}
+
+	/**
+	 * Add filter by Author
+	 */
+	public function linker_filter_by_author() {
+		global $typenow;
+		
+		if ( 'linker' === $typenow ) {
+			wp_dropdown_users(
+				array(
+					'name' => 'author',
+					'show_option_all' => __( 'View all authors', 'linker' ),
+				)
+			);
+		}
+	}
+
+	/**
+	 * Add external CSS Stylesheet file
+	 * 
+	 * @param $hook
+	 */
+	public function dashboard_widget_linker_external_css( $hook ) {
+		if ( 'index.php' !== $hook ) {
+			return;
+		}
+		
+		wp_enqueue_style( 'dashboard-widget-styles', LINKER_PLUGIN_URL . '/assets/css/styles.css' );
+	}
 	
 	public function __construct() {
 		// TODO: please add updated messages
-		
+
 		add_action( 'init', array( &$this, 'register_post_type' ) );
 		add_action( 'admin_menu', array( &$this, 'register_meta_box' ) );
-		add_action( 'admin_head', array( &$this, 'admin_header' ) );
 		add_filter( 'plugin_action_links_' . LINKER_BASE, array( &$this, 'plugin_action_links' ) );
-		
+
 		add_filter( 'manage_edit-linker_columns', array( &$this, 'admin_cpt_columns' ) );
 		add_action( 'manage_posts_custom_column', array( &$this, 'custom_columns' ) );
 		add_action( 'save_post', array( &$this, 'save_post' ) );
 		add_action( 'template_redirect', array( &$this, 'count_and_redirect' ) );
-		
+
 		// Add Dashboard Widget for Linker
-		add_action( 'wp_dashboard_setup', array( &$this, 'linker_add_dashboard_widget' ));
-		
+		add_action( 'wp_dashboard_setup', array( &$this, 'linker_add_dashboard_widget' ) );
+
 		// Add order by Clicks
 		add_action( 'pre_get_posts', array( &$this, 'clicks_orderby' ) );
 		add_filter( 'manage_edit-linker_sortable_columns', array( &$this, 'sortable_linker_clicks_column' ) );
+
+		// Add filter by Author
+		add_action( 'restrict_manage_posts', array( &$this, 'linker_filter_by_author' ) );
+
+		// Add external CSS Stylesheet file
+		add_action( 'admin_enqueue_scripts', array( &$this, 'dashboard_widget_linker_external_css' ) );
 	}
 	
 }

@@ -30,6 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 define( 'LINKER__FILE__', __FILE__ );
 define( 'LINKER_BASE', plugin_basename( LINKER__FILE__ ) );
+define( 'LINKER_PLUGIN_URL', plugins_url( '', LINKER__FILE__ ) );
 
 include( 'classes/class-linker-maintenance.php' );
 include( 'classes/class-linker-cpt.php' );
