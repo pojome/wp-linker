@@ -203,16 +203,22 @@ class Linker_CPT {
 			</thead>
 			<tbody>
 			<?php
+			// Count the posts
+			$max_links = count($posts);
+			$i = 1;
 			//loop over each post
 			foreach ( $posts as $post_id ) :
 				// Get the meta you need from each post
 				$link       = get_post_meta( $post_id, '_linker_redirect', true );
 				$link_count = absint( get_post_meta( $post_id, '_linker_count', true ) );
+				$i++;
 				?>
 				<tr>
-					<td><a target="_blank" href="<?php echo $link; ?>"><?php echo $link; ?></a></td>
-					<td><a href="<?php echo get_edit_post_link( $post_id ); ?>"><?php _e( 'Edit', 'linker' ); ?></a></td>
-					<td><?php echo $link_count; ?></td>
+					<td <?php echo ($i <= $max_links ? 'class="border-bottom"':'class="no-border-bottom"');?>>
+                    <strong><?php echo get_the_title( $post_id ); ?></strong><br />
+                    <a target="_blank" href="<?php echo $link; ?>"><?php echo $link; ?></a></td>
+					<td <?php echo ($i <= $max_links ? 'class="border-bottom"':'class="no-border-bottom"');?>><a href="<?php echo get_edit_post_link( $post_id ); ?>"><?php _e( 'Edit', 'linker' ); ?></a></td>
+					<td <?php echo ($i <= $max_links ? 'class="border-bottom"':'class="no-border-bottom"');?>><?php echo $link_count; ?></td>
 				</tr>
 			<?php endforeach; ?>
 			</tbody>
