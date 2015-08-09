@@ -276,7 +276,7 @@ class Linker_CPT {
 			return;
 		}
 		
-		wp_enqueue_style( 'dashboard-widget-styles', LINKER_PLUGIN_URL . '/assets/css/styles.css' );
+		wp_enqueue_style( 'linker-dashboard-widget-styles', LINKER_PLUGIN_URL . '/assets/css/styles.css' );
 	}
 	
 	public function __construct() {
