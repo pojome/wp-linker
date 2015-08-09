@@ -2,7 +2,7 @@
 Contributors: pojo.me, KingYes, ariel.k
 Tags: click tracking, custom post types, redirect, 301, outbound links, pretty links, link manager, links, google analytics, affiliates, external links,
 Requires at least: 3.5
-Tested up to: 4.2.2
+Tested up to: 4.3
 Stable tag: 1.0.6
 License: GPLv2 or later
 
@@ -63,6 +63,9 @@ Would you like to like to contribute to Linker? You are more than welcome to sub
 
 == Changelog ==
 
+
+= 1.0.7 =
+* Tested up to WordPress v4.3
 
 = 1.0.6 =
 * Added Dashboard Widget and Orderby clicks ([#13](https://github.com/KingYes/wp-linker/pull/13)).
