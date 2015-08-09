@@ -5,7 +5,7 @@
 **Tags:** click tracking, custom post types, redirect, 301, outbound links, pretty links, link manager, links, google analytics, affiliates, external links,  
 **Requires at least:** 3.5  
 **Tested up to:** 4.3  
-**Stable tag:** 1.0.6  
+**Stable tag:** 1.1.0  
 **License:** GPLv2 or later  
 
 Manage, create and track outbound links by custom pretty links with your domain. e.g. your-domain.com/go/fb-link
