@@ -70,7 +70,11 @@ Would you like to like to contribute to Linker? You are more than welcome to sub
 ## Changelog ##
 
 
-### 1.0.7 ###
+### 1.1.0 ###
+* Added filter by Author ([#16](https://github.com/KingYes/wp-linker/pull/16))
+* Added readonly field for Copy-Paste linker
+* Updated Dashboard Output
+* Dashboard info and CSS external file
 * Tested up to WordPress v4.3
 
 ### 1.0.6 ###
