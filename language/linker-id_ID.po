@@ -1,0 +1,169 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Linker 1.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-12 11:22+0700\n"
+"PO-Revision-Date: 2016-01-12 11:38+0700\n"
+"Language-Team: YiiBooster - YiiBooster.com <yiibooster@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: id_ID\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: classes/class-linker-cpt.php:8 language/string.php:4
+msgid "Linker"
+msgstr "Linker"
+
+#: classes/class-linker-cpt.php:9
+msgid "Link"
+msgstr "Link"
+
+#: classes/class-linker-cpt.php:10
+msgid "Add New"
+msgstr "Tambah Baru"
+
+#: classes/class-linker-cpt.php:11
+msgid "Add New Link"
+msgstr "Tambah Link Baru"
+
+#: classes/class-linker-cpt.php:12 classes/class-linker-cpt.php:200
+#: classes/class-linker-cpt.php:214
+msgid "Edit"
+msgstr "Ubah"
+
+#: classes/class-linker-cpt.php:13
+msgid "Edit Link"
+msgstr "Ubah Link"
+
+#: classes/class-linker-cpt.php:14
+msgid "New Link"
+msgstr "Link Baru"
+
+#: classes/class-linker-cpt.php:15 classes/class-linker-cpt.php:16
+msgid "View Link"
+msgstr "Lihat Link"
+
+#: classes/class-linker-cpt.php:17
+msgid "Search Link"
+msgstr "Cari Link"
+
+#: classes/class-linker-cpt.php:18
+msgid "No Links found"
+msgstr "Tidak Ada Link Yang Ditemukan"
+
+#: classes/class-linker-cpt.php:19
+msgid "No Links found in Trash"
+msgstr "Tidak ada ling dalam kategori sampah"
+
+#: classes/class-linker-cpt.php:47 classes/class-linker-cpt.php:50
+msgid "Link updated."
+msgstr "Link Diperbaharui."
+
+#: classes/class-linker-cpt.php:48
+msgid "Custom field updated."
+msgstr "Field Ubah Sesuaian telah diperbaharui."
+
+#: classes/class-linker-cpt.php:49
+msgid "Custom field deleted."
+msgstr "Field Ubah Sesuaian Telah Dihapus."
+
+#: classes/class-linker-cpt.php:52
+#, php-format
+msgid "Link restored to revision from %s"
+msgstr "Ling di kembalikan untuk revisi dari %s"
+
+#: classes/class-linker-cpt.php:53
+msgid "Link published."
+msgstr "Link berhasil di publis."
+
+#: classes/class-linker-cpt.php:54
+msgid "Link saved."
+msgstr "Link berhasil di simpan."
+
+#: classes/class-linker-cpt.php:55
+msgid "Link submitted."
+msgstr "Link berhasil di tambahkan."
+
+#: classes/class-linker-cpt.php:56
+#, php-format
+msgid "Post scheduled for: <strong>%1$s</strong>."
+msgstr "Pos di jadwalkan untuk: <strong>%1$s</strong>."
+
+#. //php.net/date
+#: classes/class-linker-cpt.php:58
+msgid "M j, Y @ G:i"
+msgstr "M j, Y @ G:i"
+
+#: classes/class-linker-cpt.php:59
+msgid "Link draft updated."
+msgstr "Draft Link berhasil di perbaharui."
+
+#: classes/class-linker-cpt.php:66
+msgid "GitHub"
+msgstr "GitHub"
+
+#: classes/class-linker-cpt.php:75
+msgid "Title"
+msgstr "Judul"
+
+#: classes/class-linker-cpt.php:76 classes/class-linker-cpt.php:199
+msgid "Redirect to"
+msgstr "Dialihkan ke"
+
+#: classes/class-linker-cpt.php:77
+msgid "Permalink"
+msgstr "Permalink"
+
+#: classes/class-linker-cpt.php:78 classes/class-linker-cpt.php:201
+msgid "Clicks"
+msgstr "Klik"
+
+#: classes/class-linker-cpt.php:79
+msgid "Author"
+msgstr "Pengarang"
+
+#: classes/class-linker-cpt.php:80
+msgid "Date"
+msgstr "Tanggal"
+
+#: classes/class-linker-cpt.php:105
+msgid "Link Info"
+msgstr "Info Link"
+
+#: classes/class-linker-cpt.php:118
+msgid "Redirect Link:"
+msgstr "Pengalihan Link:"
+
+#: classes/class-linker-cpt.php:120
+msgid "http://your-link.com/"
+msgstr "http://link-kamu.com/"
+
+#: classes/class-linker-cpt.php:125
+#, php-format
+msgid "This Link has been accessed <strong>%d</strong> times."
+msgstr "Link ini sudah di akses <strong>%d</strong> kali."
+
+#: classes/class-linker-cpt.php:170
+msgid "Linker - Top 10"
+msgstr "Linker - Top 10"
+
+#: classes/class-linker-cpt.php:192
+msgid "There are no stats available yet!"
+msgstr "Belum ada stats yang terekam!"
+
+#: classes/class-linker-cpt.php:263
+msgid "View all authors"
+msgstr "Lihat semua pengarang"
+
+#: linker.php:67 linker.php:78
+msgid "Cheatin&#8217; huh?"
+msgstr "Cheat&#8217; Mau apa?"
