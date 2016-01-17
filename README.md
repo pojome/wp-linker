@@ -28,6 +28,7 @@ Now you can show up in Analytics all clicks out. go to Content > Event Tracking 
 <h4>Translators:</h4>
 * Hebrew (he_IL) + RTL Support - [Pojo.me](http://pojo.me/)
 * Brazilian Portuguese (pt_BR) - Rhenan Cardozo
+* Indonesian (id_ID) - YiiBooster
 
 <h4>Thanks</h4>
 We took inspiration to our plugin from [Simple URL](http://wordpress.org/plugins/simple-urls/) plugin - so thank you so much, you done good job.
@@ -69,6 +70,8 @@ Would you like to like to contribute to Linker? You are more than welcome to sub
 
 ## Changelog ##
 
+### 1.1.1 ###
+* Added translate: Indonesian (id_ID) Thanks to YiiBooster ([#20](https://github.com/KingYes/wp-linker/pull/20))
 
 ### 1.1.0 ###
 * Added filter by Author ([#16](https://github.com/KingYes/wp-linker/pull/16))
