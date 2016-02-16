@@ -24,6 +24,7 @@ Create short links to your post, manage your 301 redirects, track affiliate link
 Linker adds a new custom post type to your Admin menu, where you can create, edit, delete, and manage Links by 301 redirects. What's great about Linker is that it tracks click counts and saves them as a custom field. it's really simple & cool and there is no setup involved. It works seamlessly straight out of the box for whichever theme and plugins you are using.
 
 <strong>Link Example</strong>: Just to make it extra clear, here's how the Linker plugin works.
+
 * Original URL: https://wordpress.org/plugins/linker/
 * New URL with Linker: https://pojo.me/go/linker/
 
@@ -31,6 +32,7 @@ Linker adds a new custom post type to your Admin menu, where you can create, edi
 Linker works well with [Google Analytics for WordPress](http://wordpress.org/plugins/google-analytics-for-wordpress/) by Yoast.
 
 In order to setup tracking for Google Analytics by Yoast, you need to first go to the Setting page.
+
 1. General Tab > "Track outbound click and downloads" Checkbox > check it
 1. Advanced Tab > "Set path for internal links to track as outbound links" Field > enter `/go/`
 1. Advanced Tab > "Label for those links" Field > Choose which Label to use (Not required).
