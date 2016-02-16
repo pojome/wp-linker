@@ -2,41 +2,52 @@
 [![Build Status](https://travis-ci.org/KingYes/wp-linker.svg?branch=master)](https://travis-ci.org/KingYes/wp-linker) [![Dependency Status](https://david-dm.org/KingYes/wp-linker/dev-status.svg)](https://david-dm.org/KingYes/wp-linker#info=devDependencies) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 **Contributors:** pojo.me, KingYes, ariel.k  
-**Tags:** click tracking, custom post types, redirect, 301, outbound links, pretty links, link manager, links, google analytics, affiliates, external links,  
+**Tags:** 301, Google Analytics by Yoast, affiliates, click tracking, custom post types, external-links, google analytics, link manager, links, outbound links, pretty links, redirect, affiliate, affiliates, click, clicks, hop, hoplink, link, links, marketing, mask, masking, redirect, rewrite, seo, short, shorten, shortlink, shorturl, shrink, shrinking, slug, slugs, stat, statistic, statistics, stats, tiny, tinyurl, track, tracking, tweet, twitter, url, urls, shortlinks  
 **Requires at least:** 3.5  
-**Tested up to:** 4.3  
+**Tested up to:** 4.4  
 **Stable tag:** 1.1.1  
 **License:** GPLv2 or later  
 
-Manage, create and track outbound links by custom pretty links with your domain. e.g. your-domain.com/go/fb-link
+**Track Outbound Link Clicks Easily:** Shorten & track your site links by using your own domain name. e.g. "your-domain.com/go/link"  
 
 ## Description ##
 
-Linker is a simple & easy plugin to manage, create and track outbound links from your website. Linker adds a new custom post type to your Admin menu, where you can create, edit, delete, and manage Links by 301 redirects.
+Through Linker's Short Url Tool You Can Know on Which Links Your Visitors Are Clicking. Linker is the easiest tool to use in order to create a short link in your own domain & track outbound link clicks from your website, using software like Google Analytics.
+Create short links to your post, manage your 301 redirects, track affiliate links and do many other URL related tasks easily.
 
-Linker is tracking click counts and save them of a custom field on that custom post type, it really simple & cool.
+<h4>Major Features</h4>
+* Create Short and clean URLs, using your own domain.
+* Redirect links to any location, both inbound and outbound, using 301 redirects.
+* Track outbound link clicks, with internal reporting for Hits per link.
+* Enjoy an intuitive and User Friendly Admin Interface
+* Setup tracking easily using Linker's out of the box functionality.
 
-<h4>Integration with Google Analytics</h4>
-You can track with Google Analytics to get full statistics by Event Tracking.
+<h4>How it Works?</h4>
+Linker adds a new custom post type to your Admin menu, where you can create, edit, delete, and manage Links by 301 redirects. What's great about Linker is that it tracks click counts and saves them as a custom field. it's really simple & cool and there is no setup involved. It works seamlessly straight out of the box for whichever theme and plugins you are using.
 
- This plugin work well too with [Google Analytics for WordPress](http://wordpress.org/plugins/google-analytics-for-wordpress/) by Yoast.
+**<strong>Link Example</strong>:** Just to make it extra clear, here's how the Linker plugin works.  
+* Original URL: https://wordpress.org/plugins/linker/
+* New URL with Linker: https://pojo.me/go/linker/
 
-Go to the Setting Page of Google Analytics under the Setting Menu, and go to > Internal Links to Track as Outbound  > enter "/go/" in the field > choose Label to use.
+<h4>Integration with Google Analytics by Yoast</h4>
+Linker works well with [Google Analytics for WordPress](http://wordpress.org/plugins/google-analytics-for-wordpress/) by Yoast.
 
-Now you can show up in Analytics all clicks out. go to Content > Event Tracking > Categories, and you’ll see your Label that used. that's all.
+In order to setup tracking for Google Analytics by Yoast, you need to first go to the Setting page.
+1. General Tab > "Track outbound click and downloads" Checkbox > check it
+1. Advanced Tab > "Set path for internal links to track as outbound links" Field > enter `/go/`
+1. Advanced Tab > "Label for those links" Field > Choose which Label to use (Not required).
+
+Now all of your website outbound clicks will show up automatically in Google Analytics. To view them, go to your account in Google Analytics.
+<br />
+**Under:** Content > Event Tracking > Categories, you’ll see the Label that you used for each link. That's all there is to it!  
 
 <h4>Translators:</h4>
 * Hebrew (he_IL) + RTL Support - [Pojo.me](http://pojo.me/)
 * Brazilian Portuguese (pt_BR) - Rhenan Cardozo
 * Indonesian (id_ID) - YiiBooster
 
-<h4>Thanks</h4>
-We took inspiration to our plugin from [Simple URL](http://wordpress.org/plugins/simple-urls/) plugin - so thank you so much, you done good job.
-
-<strong>Contributions:</strong><br />
-
+<h4>Contributions:</h4>
 Would you like to like to contribute to Linker? You are more than welcome to submit your pull requests on the [GitHub repo](https://github.com/KingYes/wp-linker). Also, if you have any notes about the code, please open a ticket on ths issue tracker.
-
 
 ## Installation ##
 
