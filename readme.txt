@@ -45,7 +45,7 @@ Under: Content > Event Tracking > Categories, you’ll see the Label that you us
 * Indonesian (id_ID) - YiiBooster
 
 <h4>Contributions:</h4>
-Would you like to like to contribute to Linker? You are more than welcome to submit your pull requests on the [GitHub repo](https://github.com/KingYes/wp-linker). Also, if you have any notes about the code, please open a ticket on ths issue tracker.
+Would you like to like to contribute to Linker? You are more than welcome to submit your pull requests on the [GitHub repo](https://github.com/KingYes/wp-linker). Also, if you have any notes about the code, please open a ticket on the issue tracker.
 
 == Installation ==
 
