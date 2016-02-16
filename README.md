@@ -4,7 +4,7 @@
 **Contributors:** pojo.me, KingYes, ariel.k  
 **Tags:** 301, Google Analytics by Yoast, affiliates, click tracking, custom post types, external-links, google analytics, link manager, links, outbound links, pretty links, redirect, affiliate, affiliates, click, clicks, hop, hoplink, link, links, marketing, mask, masking, redirect, rewrite, seo, short, shorten, shortlink, shorturl, shrink, shrinking, slug, slugs, stat, statistic, statistics, stats, tiny, tinyurl, track, tracking, tweet, twitter, url, urls, shortlinks  
 **Requires at least:** 3.5  
-**Tested up to:** 4.4  
+**Tested up to:** 4.4.2  
 **Stable tag:** 1.1.1  
 **License:** GPLv2 or later  
 
@@ -47,7 +47,7 @@ Now all of your website outbound clicks will show up automatically in Google Ana
 * Indonesian (id_ID) - YiiBooster
 
 <h4>Contributions:</h4>
-Would you like to like to contribute to Linker? You are more than welcome to submit your pull requests on the [GitHub repo](https://github.com/KingYes/wp-linker). Also, if you have any notes about the code, please open a ticket on ths issue tracker.
+Would you like to like to contribute to Linker? You are more than welcome to submit your pull requests on the [GitHub repo](https://github.com/KingYes/wp-linker). Also, if you have any notes about the code, please open a ticket on the issue tracker.
 
 ## Installation ##
 
@@ -80,6 +80,9 @@ Would you like to like to contribute to Linker? You are more than welcome to sub
 
 
 ## Changelog ##
+
+### 1.1.2 ###
+* Tested up to WordPress v4.4.2 
 
 ### 1.1.1 ###
 * Added translate: Indonesian (id_ID) Thanks to YiiBooster ([#20](https://github.com/KingYes/wp-linker/pull/20))
