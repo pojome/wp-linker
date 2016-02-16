@@ -12,7 +12,7 @@
 
 ## Description ##
 
-Through Linker's Short Url Tool You Can Know on Which Links Your Visitors Are Clicking. Linker is the easiest tool to use in order to create a short link in your own domain & track outbound link clicks from your website, using software like Google Analytics.
+Through Linker's short url tool you can know on which links your visitors are clicking. Linker is the easiest tool to use in order to create a short link in your own domain & track outbound link clicks from your website, using software like Google Analytics.
 Create short links to your post, manage your 301 redirects, track affiliate links and do many other URL related tasks easily.
 
 <h4>Major Features</h4>
