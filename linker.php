@@ -97,4 +97,6 @@ final class Linker_Main {
 	
 }
 
-Linker_Main::instance();
+if ( ! defined( 'POJO_LINKER_TESTS' ) ) {
+	Linker_Main::instance();
+}

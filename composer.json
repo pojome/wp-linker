@@ -1,0 +1,15 @@
+{
+	"name": "KingYes/wp-linker",
+	"description": " Manage, create and track outbound links by custom pretty links with your domain.",
+	"minimum-stability": "dev",
+	"license": "gpl2",
+	"authors": [
+		{
+			"name": "Yakir Sitbon",
+			"email": "yakir@pojo.me"
+		}
+	],
+	"require": {
+		"phpunit/phpunit": "4.8.8"
+	}
+}

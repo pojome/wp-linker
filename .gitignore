@@ -1,5 +1,7 @@
 .idea/
 node_modules/
 build/
+vendor/
 npm-debug.log
 .DS_Store
+composer.lock
