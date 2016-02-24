@@ -90,6 +90,9 @@ Would you like to like to contribute to Linker? You are more than welcome to sub
 * Dashboard info and CSS external file
 * Tested up to WordPress v4.3
 
+= 1.0.7 =
+* Tweak! - Exclude links from search
+
 = 1.0.6 =
 * Added Dashboard Widget and Orderby clicks ([#13](https://github.com/KingYes/wp-linker/pull/13)).
 

@@ -20,16 +20,17 @@ class Linker_CPT {
 		);
 
 		$args = array(
-			'labels'          => $labels,
-			'public'          => true,
-			'query_var'       => true,
+			'labels' => $labels,
+			'public' => true,
+			'query_var' => true,
 			'capability_type' => 'post',
-			'has_archive'     => false,
-			'hierarchical'    => false,
-			'menu_position'   => 30,
-			'supports'        => array( 'title', 'author' ),
-			'rewrite'         => array(
-				'slug'       => apply_filters( 'linker_prefix_slug', 'go' ),
+			'has_archive' => false,
+			'hierarchical' => false,
+			'exclude_from_search' => true,
+			'menu_position' => 30,
+			'supports' => array( 'title', 'author' ),
+			'rewrite' => array(
+				'slug' => apply_filters( 'linker_prefix_slug', 'go' ),
 				'with_front' => false,
 			),
 		);
