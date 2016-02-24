@@ -77,6 +77,9 @@ Would you like to like to contribute to Linker? You are more than welcome to sub
 
 == Changelog ==
 
+= 1.1.3 =
+* Tweak! - Exclude links from search 
+
 = 1.1.2 =
 * Tested up to WordPress v4.4.2 
 
