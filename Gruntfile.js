@@ -139,6 +139,7 @@ module.exports = function(grunt) {
 		wp_readme_to_markdown: {
 			github: {
 				options: {
+					wordpressPluginSlug: 'linker',
 					travisUrlRepo: 'https://travis-ci.org/KingYes/wp-linker',
 					gruntDependencyStatusUrl: 'https://david-dm.org/KingYes/wp-linker'
 				},
