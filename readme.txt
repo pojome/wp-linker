@@ -77,6 +77,9 @@ Would you like to like to contribute to Linker? You are more than welcome to sub
 
 == Changelog ==
 
+= 1.2.0 =
+* New! - Added filter to manage the cpt slug for linker
+
 = 1.1.3 =
 * Tweak! - Exclude links from search 
 

@@ -2,8 +2,15 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 class Linker_CPT {
+	
+	public $slug = 'linker';
 
 	public function register_post_type() {
+		$this->slug = apply_filters( 'linker_post_type_slug', $this->slug );
+		
+		if ( apply_filters( 'linker_skip_register_post_type', false ) )
+			return;
+		
 		$labels = array(
 			'name'               => __( 'Linker', 'linker' ),
 			'singular_name'      => __( 'Link', 'linker' ),
@@ -35,7 +42,7 @@ class Linker_CPT {
 			),
 		);
 		
-		register_post_type( 'linker',
+		register_post_type( $this->slug,
 			apply_filters( 'linker_register_post_type_args', $args )
 		);
 	}
@@ -43,7 +50,7 @@ class Linker_CPT {
 	public function post_updated_messages( $messages ) {
 		global $post;
 
-		$messages['linker'] = array(
+		$messages[ $this->slug ] = array(
 			0 => '', // Unused. Messages start at index 1.
 			1 => __( 'Link updated.', 'linker' ),
 			2 => __( 'Custom field updated.', 'linker' ),
@@ -105,7 +112,7 @@ class Linker_CPT {
 			'linker-url-information',
 			__( 'Link Info', 'linker' ),
 			array( &$this, 'render_meta_box' ),
-			'linker',
+			$this->slug,
 			'normal',
 			'high'
 		);
@@ -146,7 +153,7 @@ class Linker_CPT {
 	}
 
 	public function count_and_redirect() {
-		if ( ! is_singular( 'linker' ) )
+		if ( ! is_singular( $this->slug ) )
 			return;
 
 		$counter = absint( get_post_meta( get_the_ID(), '_linker_count', true ) );
@@ -179,7 +186,7 @@ class Linker_CPT {
 	public function linker_dashboard_widget_function() {
 		$posts = get_posts(
 			array(
-				'post_type' => 'linker',
+				'post_type' => $this->slug,
 				'post_status' => 'publish',
 				'fields' => 'ids',
 				'meta_key' => '_linker_count',
@@ -257,7 +264,7 @@ class Linker_CPT {
 	public function linker_filter_by_author() {
 		global $typenow;
 		
-		if ( 'linker' === $typenow ) {
+		if ( $this->slug === $typenow ) {
 			wp_dropdown_users(
 				array(
 					'name' => 'author',
@@ -279,7 +286,7 @@ class Linker_CPT {
 		if ( 'index.php' === $hook )
 			$include_style = true;
 		
-		if ( 'edit.php' === $hook && 'linker' === $typenow )
+		if ( 'edit.php' === $hook && $this->slug === $typenow )
 			$include_style = true;
 		
 		if ( ! $include_style )
@@ -313,5 +320,4 @@ class Linker_CPT {
 		// Add external CSS Stylesheet file
 		add_action( 'admin_enqueue_scripts', array( &$this, 'dashboard_widget_linker_external_css' ) );
 	}
-	
 }

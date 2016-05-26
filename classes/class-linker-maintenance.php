@@ -7,7 +7,6 @@ class Linker_Maintenance {
 		Linker_Main::instance()->cpt->register_post_type();
 		flush_rewrite_rules();
 	}
-	
 }
 
 register_activation_hook( LINKER__FILE__, array( 'Linker_Maintenance', 'activation' ) );

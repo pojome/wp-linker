@@ -94,7 +94,6 @@ final class Linker_Main {
 		
 		add_action( 'plugins_loaded', array( &$this, 'load_textdomain' ) );
 	}
-	
 }
 
 if ( ! defined( 'POJO_LINKER_TESTS' ) ) {

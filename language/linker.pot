@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Linker 1.1.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-06 16:37+0200\n"
+"POT-Creation-Date: 2016-05-26 17:21+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,147 +17,147 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: classes/class-linker-cpt.php:8 language/string.php:4
+#: classes/class-linker-cpt.php:15 language/string.php:4
 msgid "Linker"
 msgstr ""
 
-#: classes/class-linker-cpt.php:9
+#: classes/class-linker-cpt.php:16
 msgid "Link"
 msgstr ""
 
-#: classes/class-linker-cpt.php:10
+#: classes/class-linker-cpt.php:17
 msgid "Add New"
 msgstr ""
 
-#: classes/class-linker-cpt.php:11
+#: classes/class-linker-cpt.php:18
 msgid "Add New Link"
 msgstr ""
 
-#: classes/class-linker-cpt.php:12 classes/class-linker-cpt.php:201
-#: classes/class-linker-cpt.php:215
+#: classes/class-linker-cpt.php:19 classes/class-linker-cpt.php:208
+#: classes/class-linker-cpt.php:222
 msgid "Edit"
 msgstr ""
 
-#: classes/class-linker-cpt.php:13
+#: classes/class-linker-cpt.php:20
 msgid "Edit Link"
 msgstr ""
 
-#: classes/class-linker-cpt.php:14
+#: classes/class-linker-cpt.php:21
 msgid "New Link"
 msgstr ""
 
-#: classes/class-linker-cpt.php:15 classes/class-linker-cpt.php:16
+#: classes/class-linker-cpt.php:22 classes/class-linker-cpt.php:23
 msgid "View Link"
 msgstr ""
 
-#: classes/class-linker-cpt.php:17
+#: classes/class-linker-cpt.php:24
 msgid "Search Link"
 msgstr ""
 
-#: classes/class-linker-cpt.php:18
+#: classes/class-linker-cpt.php:25
 msgid "No Links found"
 msgstr ""
 
-#: classes/class-linker-cpt.php:19
+#: classes/class-linker-cpt.php:26
 msgid "No Links found in Trash"
 msgstr ""
 
-#: classes/class-linker-cpt.php:48 classes/class-linker-cpt.php:51
+#: classes/class-linker-cpt.php:55 classes/class-linker-cpt.php:58
 msgid "Link updated."
 msgstr ""
 
-#: classes/class-linker-cpt.php:49
+#: classes/class-linker-cpt.php:56
 msgid "Custom field updated."
 msgstr ""
 
-#: classes/class-linker-cpt.php:50
+#: classes/class-linker-cpt.php:57
 msgid "Custom field deleted."
 msgstr ""
 
-#: classes/class-linker-cpt.php:53
+#: classes/class-linker-cpt.php:60
 #, php-format
 msgid "Link restored to revision from %s"
 msgstr ""
 
-#: classes/class-linker-cpt.php:54
+#: classes/class-linker-cpt.php:61
 msgid "Link published."
 msgstr ""
 
-#: classes/class-linker-cpt.php:55
+#: classes/class-linker-cpt.php:62
 msgid "Link saved."
 msgstr ""
 
-#: classes/class-linker-cpt.php:56
+#: classes/class-linker-cpt.php:63
 msgid "Link submitted."
 msgstr ""
 
-#: classes/class-linker-cpt.php:57
+#: classes/class-linker-cpt.php:64
 #, php-format
 msgid "Post scheduled for: <strong>%1$s</strong>."
 msgstr ""
 
-#: classes/class-linker-cpt.php:59
+#: classes/class-linker-cpt.php:66
 msgid "M j, Y @ G:i"
 msgstr ""
 
-#: classes/class-linker-cpt.php:60
+#: classes/class-linker-cpt.php:67
 msgid "Link draft updated."
 msgstr ""
 
-#: classes/class-linker-cpt.php:67
+#: classes/class-linker-cpt.php:74
 msgid "GitHub"
 msgstr ""
 
-#: classes/class-linker-cpt.php:76
+#: classes/class-linker-cpt.php:83
 msgid "Title"
 msgstr ""
 
-#: classes/class-linker-cpt.php:77 classes/class-linker-cpt.php:200
+#: classes/class-linker-cpt.php:84 classes/class-linker-cpt.php:207
 msgid "Redirect to"
 msgstr ""
 
-#: classes/class-linker-cpt.php:78
+#: classes/class-linker-cpt.php:85
 msgid "Permalink"
 msgstr ""
 
-#: classes/class-linker-cpt.php:79 classes/class-linker-cpt.php:202
+#: classes/class-linker-cpt.php:86 classes/class-linker-cpt.php:209
 msgid "Clicks"
 msgstr ""
 
-#: classes/class-linker-cpt.php:80
+#: classes/class-linker-cpt.php:87
 msgid "Author"
 msgstr ""
 
-#: classes/class-linker-cpt.php:81
+#: classes/class-linker-cpt.php:88
 msgid "Date"
 msgstr ""
 
-#: classes/class-linker-cpt.php:106
+#: classes/class-linker-cpt.php:113
 msgid "Link Info"
 msgstr ""
 
-#: classes/class-linker-cpt.php:119
+#: classes/class-linker-cpt.php:126
 msgid "Redirect Link:"
 msgstr ""
 
-#: classes/class-linker-cpt.php:121
+#: classes/class-linker-cpt.php:128
 msgid "http://your-link.com/"
 msgstr ""
 
-#: classes/class-linker-cpt.php:126
+#: classes/class-linker-cpt.php:133
 #, php-format
 msgid "This Link has been accessed <strong>%d</strong> times."
 msgstr ""
 
-#: classes/class-linker-cpt.php:171
+#: classes/class-linker-cpt.php:178
 msgid "Linker - Top 10"
 msgstr ""
 
-#: classes/class-linker-cpt.php:193
+#: classes/class-linker-cpt.php:200
 msgid "There are no stats available yet!"
 msgstr ""
 
-#: classes/class-linker-cpt.php:264
+#: classes/class-linker-cpt.php:271
 msgid "View all authors"
 msgstr ""
 
