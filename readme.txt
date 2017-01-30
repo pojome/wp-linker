@@ -1,6 +1,6 @@
 === Linker ===
 Contributors: pojo.me, KingYes, ariel.k
-Tags: 301, Google Analytics by Yoast, affiliates, click tracking, custom post types, external-links, google analytics, link manager, links, outbound links, pretty links, redirect, affiliate, affiliates, click, clicks, hop, hoplink, link, links, marketing, mask, masking, redirect, rewrite, seo, short, shorten, shortlink, shorturl, shrink, shrinking, slug, slugs, stat, statistic, statistics, stats, tiny, tinyurl, track, tracking, tweet, twitter, url, urls, shortlinks
+Tags: automation, 301, Google Analytics by Yoast, affiliates, click tracking, custom post types, external-links, google analytics, link manager, links, outbound links, pretty links, redirect, affiliate, affiliates, click, clicks, link, links, marketing, redirect, rewrite, seo, shortlink, shorturl, shrink, shrinking, slug, stat, statistics, stats, tiny, tinyurl, track, tracking, tweet, twitter, url
 Requires at least: 3.5
 Tested up to: 4.5
 Stable tag: 1.2.0
