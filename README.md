@@ -2,10 +2,10 @@
 [![Build Status](https://travis-ci.org/KingYes/wp-linker.svg?branch=master)](https://travis-ci.org/KingYes/wp-linker) [![Dependency Status](https://david-dm.org/KingYes/wp-linker/dev-status.svg)](https://david-dm.org/KingYes/wp-linker#info=devDependencies) [![WordPress](https://img.shields.io/wordpress/v/linker.svg?style=flat-square)](https://wordpress.org/plugins/linker/) [![WordPress](https://img.shields.io/wordpress/plugin/r/linker.svg?style=flat-square)](https://wordpress.org/plugins/linker/) [![WordPress](https://img.shields.io/wordpress/plugin/v/linker.svg?style=flat-square)](https://wordpress.org/plugins/linker/) [![WordPress](https://img.shields.io/wordpress/plugin/dt/linker.svg?style=flat-square)](https://wordpress.org/plugins/linker/) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.svg)](http://gruntjs.com/)
 
 **Contributors:** pojo.me, KingYes, ariel.k  
-**Tags:** 301, Google Analytics by Yoast, affiliates, click tracking, custom post types, external-links, google analytics, link manager, links, outbound links, pretty links, redirect, affiliate, affiliates, click, clicks, hop, hoplink, link, links, marketing, mask, masking, redirect, rewrite, seo, short, shorten, shortlink, shorturl, shrink, shrinking, slug, slugs, stat, statistic, statistics, stats, tiny, tinyurl, track, tracking, tweet, twitter, url, urls, shortlinks  
+**Tags:** automation, 301, Google Analytics by Yoast, affiliates, click tracking, custom post types, external-links, google analytics, link manager, links, outbound links, pretty links, redirect, affiliate, affiliates, click, clicks, link, links, marketing, redirect, rewrite, seo, shortlink, shorturl, shrink, shrinking, slug, stat, statistics, stats, tiny, tinyurl, track, tracking, tweet, twitter, url  
 **Requires at least:** 3.5  
-**Tested up to:** 4.5  
-**Stable tag:** 1.2.0  
+**Tested up to:** 5.3  
+**Stable tag:** 1.2.1  
 **License:** GPLv2 or later  
 
 **Track Outbound Link Clicks Easily:** Shorten & track your site links by using your own domain name. e.g. "your-domain.com/go/link"  
