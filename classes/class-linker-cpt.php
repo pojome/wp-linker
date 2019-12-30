@@ -6,10 +6,9 @@ class Linker_CPT {
 	public $slug = 'linker';
 
 	public function register_post_type() {
-		$this->slug = apply_filters( 'linker_post_type_slug', $this->slug );
-		
-		if ( apply_filters( 'linker_skip_register_post_type', false ) )
+		if ( apply_filters( 'linker_skip_register_post_type', false ) ) {
 			return;
+		}
 		
 		$labels = array(
 			'name'               => __( 'Linker', 'linker' ),
@@ -102,7 +101,7 @@ class Linker_CPT {
 				break;
 			
 			case 'linker_clicks' :
-				echo absint( get_post_meta( $post->ID, '_linker_count', true ) );
+				echo number_format_i18n( absint( get_post_meta( $post->ID, '_linker_count', true ) ) );
 				break;
 		}
 	}
@@ -125,7 +124,7 @@ class Linker_CPT {
 		echo strtr( '<p><strong><label for="{name}">{label}</label></strong></p><p><input type="url" id="{name}" name="{name}" value="{value}" placeholder="{placeholder}" class="large-text" /></p>', array(
 			'{label}' => __( 'Redirect Link:', 'linker' ),
 			'{name}'  => $field_id,
-			'{placeholder}' => __( 'http://your-link.com/', 'linker' ),
+			'{placeholder}' => __( 'https://your-link.com/', 'linker' ),
 			'{value}' => esc_attr( get_post_meta( $post->ID, $field_id, true ) ),
 		) );
 
@@ -134,22 +133,27 @@ class Linker_CPT {
 	}
 
 	public function save_post( $post_id ) {
-		if ( ! isset( $_POST['_linker_meta_box_nonce'] ) || ! wp_verify_nonce( $_POST['_linker_meta_box_nonce'], basename( __FILE__ ) ) )
+		if ( ! isset( $_POST['_linker_meta_box_nonce'] ) || ! wp_verify_nonce( $_POST['_linker_meta_box_nonce'], basename( __FILE__ ) ) ) {
 			return;
+		}
 
-		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
+		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 			return;
+		}
 
-		if ( defined( 'DOING_AJAX' ) && DOING_AJAX )
+		if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
 			return;
+		}
 
-		if ( defined( 'DOING_CRON' ) && DOING_CRON )
+		if ( defined( 'DOING_CRON' ) && DOING_CRON ) {
 			return;
+		}
 		
-		if ( isset( $_POST['_linker_redirect'] ) )
+		if ( isset( $_POST['_linker_redirect'] ) ) {
 			update_post_meta( $post_id, '_linker_redirect', $_POST['_linker_redirect'] );
-		else
+		} else {
 			delete_post_meta( $post_id, '_linker_redirect' );
+		}
 	}
 
 	public function count_and_redirect() {
@@ -161,11 +165,12 @@ class Linker_CPT {
 
 		$redirect_url = esc_url_raw( get_post_meta( get_the_ID(), '_linker_redirect', true ) );
 		
-		if ( ! empty( $redirect_url ) )
+		if ( ! empty( $redirect_url ) ) {
 			wp_redirect( $redirect_url, 301 );
-		else
+		} else {
 			wp_redirect( home_url(), 302 );
-		
+		}
+
 		die();
 	}
 
@@ -247,8 +252,9 @@ class Linker_CPT {
 	 * @param WP_Query $query
 	 */
 	public function clicks_orderby( $query ) {
-		if ( ! is_admin() )
+		if ( ! is_admin() ) {
 			return;
+		}
 
 		$orderby = $query->get( 'orderby' );
 
@@ -264,14 +270,16 @@ class Linker_CPT {
 	public function linker_filter_by_author() {
 		global $typenow;
 		
-		if ( $this->slug === $typenow ) {
-			wp_dropdown_users(
-				array(
-					'name' => 'author',
-					'show_option_all' => __( 'View all authors', 'linker' ),
-				)
-			);
+		if ( ! $this->slug === $typenow ) {
+			return;
 		}
+
+		wp_dropdown_users(
+			array(
+				'name' => 'author',
+				'show_option_all' => __( 'View all authors', 'linker' ),
+			)
+		);
 	}
 
 	/**
@@ -283,26 +291,31 @@ class Linker_CPT {
 		global $typenow;
 		
 		$include_style = false;
-		if ( 'index.php' === $hook )
+		if ( 'index.php' === $hook ) {
 			$include_style = true;
+		}
 		
-		if ( 'edit.php' === $hook && $this->slug === $typenow )
+		if ( 'edit.php' === $hook && $this->slug === $typenow ) {
 			$include_style = true;
+		}
 		
-		if ( ! $include_style )
+		if ( ! $include_style ) {
 			return;
+		}
 		
 		wp_enqueue_style( 'linker-dashboard-widget-styles', LINKER_PLUGIN_URL . '/assets/css/styles.css' );
 	}
 	
 	public function __construct() {
+		$this->slug = apply_filters( 'linker_post_type_slug', $this->slug );
+
 		add_action( 'init', array( &$this, 'register_post_type' ) );
 		add_filter( 'post_updated_messages', array( &$this, 'post_updated_messages' ) );
 		
 		add_action( 'admin_menu', array( &$this, 'register_meta_box' ) );
 		add_filter( 'plugin_action_links_' . LINKER_BASE, array( &$this, 'plugin_action_links' ) );
 
-		add_filter( 'manage_edit-linker_columns', array( &$this, 'admin_cpt_columns' ) );
+		add_filter( "manage_edit-{$this->slug}_columns", array( &$this, 'admin_cpt_columns' ) );
 		add_action( 'manage_posts_custom_column', array( &$this, 'custom_columns' ) );
 		add_action( 'save_post', array( &$this, 'save_post' ) );
 		add_action( 'template_redirect', array( &$this, 'count_and_redirect' ) );
@@ -312,7 +325,7 @@ class Linker_CPT {
 
 		// Add order by Clicks
 		add_action( 'pre_get_posts', array( &$this, 'clicks_orderby' ) );
-		add_filter( 'manage_edit-linker_sortable_columns', array( &$this, 'sortable_linker_clicks_column' ) );
+		add_filter( "manage_edit-{$this->slug}_sortable_columns", array( &$this, 'sortable_linker_clicks_column' ) );
 
 		// Add filter by Author
 		add_action( 'restrict_manage_posts', array( &$this, 'linker_filter_by_author' ) );
