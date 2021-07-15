@@ -2,7 +2,7 @@
 Contributors: pojo.me, KingYes, ariel.k
 Tags: automation, 301, Google Analytics by Yoast, affiliates, click tracking, custom post types, external-links, google analytics, link manager, links, outbound links, pretty links, redirect, affiliate, affiliates, click, clicks, link, links, marketing, redirect, rewrite, seo, shortlink, shorturl, shrink, shrinking, slug, stat, statistics, stats, tiny, tinyurl, track, tracking, tweet, twitter, url
 Requires at least: 3.5
-Tested up to: 5.7
+Tested up to: 5.8
 Stable tag: 1.2.1
 License: GPLv2 or later
 
