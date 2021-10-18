@@ -463,9 +463,9 @@ class Linker_CPT {
 			'linker_permalink' => __( 'Permalink', 'linker' ),
 			'linker_clicks'    => __( 'Clicks', 'linker' ),
 			'author'           => __( 'Author', 'linker' ),
-            'thumbnail'        => __( 'Thumbnail' ),
-            'date'             => __( 'Date', 'linker' ),
-            'order'            => __( 'Order', 'linker' ),
+			'thumbnail'        => __( 'Thumbnail' ),
+			'date'             => __( 'Date', 'linker' ),
+			'order'            => __( 'Order', 'linker' ),
 		);
 	}
 
