@@ -45,6 +45,7 @@ Under: Content > Event Tracking > Categories, you’ll see the Label that you us
 * Hebrew (he_IL) + RTL Support - [Pojo.me](http://pojo.me/)
 * Brazilian Portuguese (pt_BR) - Rhenan Cardozo
 * Indonesian (id_ID) - YiiBooster
+* French - Norico
 
 <h4>Contributions:</h4>
 Would you like to like to contribute to Linker? You are more than welcome to submit your pull requests on the [GitHub repo](https://github.com/KingYes/wp-linker). Also, if you have any notes about the code, please open a ticket on the issue tracker.
