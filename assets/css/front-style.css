@@ -1,0 +1,12 @@
+.linker-thumbnail {
+	justify-content: center;
+	display: flex;
+}
+.linker-thumbnail-icon {
+	width: 16px;
+	height: 16px;
+	margin-right: 8px;
+}
+.linker_url {
+	text-decoration: none;
+}

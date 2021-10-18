@@ -3,7 +3,7 @@ Contributors: pojo.me, KingYes, ariel.k
 Tags: automation, 301, Google Analytics by Yoast, affiliates, click tracking, custom post types, external-links, google analytics, link manager, links, outbound links, pretty links, redirect, affiliate, affiliates, click, clicks, link, links, marketing, redirect, rewrite, seo, shortlink, shorturl, shrink, shrinking, slug, stat, statistics, stats, tiny, tinyurl, track, tracking, tweet, twitter, url
 Requires at least: 3.5
 Tested up to: 5.8
-Stable tag: 1.2.1
+Stable tag: 1.2.1.7
 License: GPLv2 or later
 
 Track Outbound Link Clicks Easily: Shorten & track your site links by using your own domain name. e.g. "your-domain.com/go/link"
@@ -77,6 +77,16 @@ Would you like to like to contribute to Linker? You are more than welcome to sub
 
 == Changelog ==
 
+= 1.2.1.7 =
+* Added thumbnail support
+* Added order and filter by order
+* Added widget
+* Added translate: French (fr_FR) (.pot file modified)
+* Tweak! - Add metakey on create linker post
+* Updated Dashboard Output
+* Tested up to WordPress v5.8.1
+
+
 = 1.2.1 =
 * Tweak! - Adjust format number
 * Tweak! - Added support for other CPT view
@@ -85,10 +95,10 @@ Would you like to like to contribute to Linker? You are more than welcome to sub
 * New! - Added filter to manage the cpt slug for linker
 
 = 1.1.3 =
-* Tweak! - Exclude links from search 
+* Tweak! - Exclude links from search
 
 = 1.1.2 =
-* Tested up to WordPress v4.4.2 
+* Tested up to WordPress v4.4.2
 
 = 1.1.1 =
 * Added translate: Indonesian (id_ID) Thanks to YiiBooster ([#20](https://github.com/KingYes/wp-linker/pull/20))
