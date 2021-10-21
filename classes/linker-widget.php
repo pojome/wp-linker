@@ -56,6 +56,11 @@ class Linker_Widget extends WP_Widget {
 
         query_posts( $linker_query_args );
 
+        if ( intval($instance['thumbnail']) !== 1 )
+        {
+            echo '<ul class="list-group list-group-flush">';
+        }
+
         while ( have_posts() ) : the_post();
             global $post;
 
@@ -63,7 +68,7 @@ class Linker_Widget extends WP_Widget {
             {
                 echo strtr ('<a {target} title="{text}" class="linker-thumbnail" href="{permalink}" >{thumbnail}</a>',
                     array (
-                        '{thumbnail}' => get_the_post_thumbnail($post->ID, "thumbnail"),
+                        '{thumbnail}' => get_the_post_thumbnail($post->ID, "medium"),
                         '{text}'      => get_the_title(),
                         '{permalink}' => get_the_permalink(),
                         '{order}'     => $post->menu_order,
@@ -72,7 +77,7 @@ class Linker_Widget extends WP_Widget {
             }
             else
             {
-                echo strtr ('<a {target} href="{permalink}" class="linker_url"><img src="{thumbnail}" class="linker-thumbnail-icon">{text}</a>',
+                echo strtr ('<li class="list-group-item"><a {target} href="{permalink}" class="linker_url"><img src="{thumbnail}" class="linker-thumbnail-icon">{text}</a></li>',
                     array (
                         '{thumbnail}' => has_post_thumbnail() ? get_the_post_thumbnail_url($post->ID, "thumbnail") : plugin_dir_url(dirname(__FILE__)).'assets/images/default.png',
                         '{text}'      => get_the_title(),
@@ -82,6 +87,12 @@ class Linker_Widget extends WP_Widget {
                     ));
             }
         endwhile;
+
+        if ( intval($instance['thumbnail']) !== 1 )
+        {
+            echo '</ul>';
+        }
+
         echo $args['after_widget'];
     }
 
