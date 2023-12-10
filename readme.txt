@@ -77,6 +77,9 @@ Would you like to like to contribute to Linker? You are more than welcome to sub
 
 == Changelog ==
 
+= 1.2.2 =
+* Security Fix: Add escaping data in the admin area
+
 = 1.2.1 =
 * Tweak! - Adjust format number
 * Tweak! - Added support for other CPT view
