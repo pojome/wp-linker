@@ -93,7 +93,7 @@ class Linker_CPT {
 
 		switch ( $column ) {
 			case 'linker_url' :
-				echo make_clickable( get_post_meta( $post->ID, '_linker_redirect', true ) );
+				echo make_clickable( esc_url( get_post_meta( $post->ID, '_linker_redirect', true ) ) );
 				break;
 			
 			case 'linker_permalink' :
@@ -182,7 +182,7 @@ class Linker_CPT {
 			'linker_dashboard_widget',
 			__( 'Linker - Top 10', 'linker' ),
 			array( &$this, 'linker_dashboard_widget_function' )
-		);	
+		);
 	}
 
 	/**
@@ -223,9 +223,9 @@ class Linker_CPT {
 				$link_count = absint( get_post_meta( $post_id, '_linker_count', true ) );
 				?>
 				<tr>
-					<td><a target="_blank" href="<?php echo $link; ?>"><?php echo $link; ?></a></td>
+					<td><a target="_blank" href="<?php echo esc_attr( $link ); ?>"><?php echo esc_url( $link ); ?></a></td>
 					<td><a href="<?php echo get_edit_post_link( $post_id ); ?>"><?php _e( 'Edit', 'linker' ); ?></a></td>
-					<td><?php echo $link_count; ?></td>
+					<td><?php echo esc_html( $link_count ); ?></td>
 				</tr>
 			<?php endforeach; ?>
 			</tbody>
@@ -235,7 +235,7 @@ class Linker_CPT {
 
 	/**
 	 * Add order by Clicks
-	 * 
+	 *
 	 * @param array $columns
 	 *
 	 * @return array
@@ -248,7 +248,7 @@ class Linker_CPT {
 
 	/**
 	 * Add order by Clicks
-	 * 
+	 *
 	 * @param WP_Query $query
 	 */
 	public function clicks_orderby( $query ) {
@@ -284,7 +284,7 @@ class Linker_CPT {
 
 	/**
 	 * Add external CSS Stylesheet file
-	 * 
+	 *
 	 * @param $hook
 	 */
 	public function dashboard_widget_linker_external_css( $hook ) {
