@@ -128,8 +128,6 @@ class Linker_CPT {
 			'{value}' => esc_attr( get_post_meta( $post->ID, $field_id, true ) ),
 		) );
 
-		// Add select with three options
-
 		$options = array(
 			'' => __( 'No using query params', 'linker' ),
 			'add_n_override' => __( 'Add and override query params', 'linker' ),
