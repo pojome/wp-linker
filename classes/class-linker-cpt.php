@@ -128,6 +128,29 @@ class Linker_CPT {
 			'{value}' => esc_attr( get_post_meta( $post->ID, $field_id, true ) ),
 		) );
 
+		// Add select with three options
+
+		$options = array(
+			'' => __( 'No using query params', 'linker' ),
+			'add_n_override' => __( 'Add and override query params', 'linker' ),
+			'add_only' => __( 'Add only query params', 'linker' ),
+		);
+
+		$field_id = '_linker_query_params';
+
+		$query_params_selected = get_post_meta( $post->ID, $field_id, true );
+
+		$options_html = '';
+		foreach ( $options as $key => $label ) {
+			$options_html .= sprintf( '<option value="%s" %s>%s</option>', $key, selected( $query_params_selected, $key, false ), $label );
+		}
+
+		echo strtr( '<p><strong><label for="{name}">{label}</label></strong></p><p><select id="{name}" name="{name}" class="large-text">{options_html}</select>', array(
+			'{label}' => __( 'Query Params:', 'linker' ),
+			'{name}'  => $field_id,
+			'{options_html}' => $options_html,
+		) );
+
 		$counter = absint( get_post_meta( $post->ID, '_linker_count', true ) );
 		printf( '<p class="description">' . __( 'This Link has been accessed <strong>%d</strong> times.', 'linker' ) . '</p>', $counter );
 	}
@@ -154,17 +177,40 @@ class Linker_CPT {
 		} else {
 			delete_post_meta( $post_id, '_linker_redirect' );
 		}
+
+		if ( ! empty( $_POST['_linker_query_params'] ) ) {
+			update_post_meta( $post_id, '_linker_query_params', $_POST['_linker_query_params'] );
+		} else {
+			delete_post_meta( $post_id, '_linker_query_params' );
+		}
 	}
 
 	public function count_and_redirect() {
-		if ( ! is_singular( $this->slug ) )
+		if ( ! is_singular( $this->slug ) ) {
 			return;
+		}
 
 		$counter = absint( get_post_meta( get_the_ID(), '_linker_count', true ) );
 		update_post_meta( get_the_ID(), '_linker_count', ++$counter );
 
 		$redirect_url = esc_url_raw( get_post_meta( get_the_ID(), '_linker_redirect', true ) );
-		
+
+		$query_params = get_post_meta( get_the_ID(), '_linker_query_params', true );
+
+		if ( ! empty( $query_params ) && ! empty( $_GET ) ) {
+			$url_parse = wp_parse_url( $redirect_url, PHP_URL_QUERY );
+			parse_str( $url_parse, $redirect_query_params );
+
+			$query = array();
+			if ( 'add_n_override' === $query_params ) {
+				$query = array_merge( $redirect_query_params, $_GET );
+			} elseif ( 'add_only' === $query_params ) {
+				$query = array_merge( $_GET, $redirect_query_params );
+			}
+
+			$redirect_url = add_query_arg( $query, $redirect_url );
+		}
+
 		if ( ! empty( $redirect_url ) ) {
 			wp_redirect( $redirect_url, 301 );
 		} else {
