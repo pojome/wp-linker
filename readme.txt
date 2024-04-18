@@ -2,7 +2,7 @@
 Contributors: pojo.me, KingYes, ariel.k
 Tags: automation, 301, Google Analytics by Yoast, affiliates, click tracking, custom post types, external-links, google analytics, link manager, links, outbound links, pretty links, redirect, affiliate, affiliates, click, clicks, link, links, marketing, redirect, rewrite, seo, shortlink, shorturl, shrink, shrinking, slug, stat, statistics, stats, tiny, tinyurl, track, tracking, tweet, twitter, url
 Requires at least: 3.5
-Tested up to: 6.4
+Tested up to: 6.5
 Stable tag: 1.2.2
 License: GPLv2 or later
 
@@ -76,6 +76,9 @@ Would you like to like to contribute to Linker? You are more than welcome to sub
 
 
 == Changelog ==
+
+= 1.3.0 =
+* New: Introducing URL Parameters forwarding for improved tracking on every redirection
 
 = 1.2.2 =
 * Security Fix: Add escaping data in the admin area
