@@ -143,10 +143,21 @@ class Linker_CPT {
 			$options_html .= sprintf( '<option value="%s" %s>%s</option>', $key, selected( $query_params_selected, $key, false ), $label );
 		}
 
-		echo strtr( '<p><strong><label for="{name}">{label}</label></strong></p><p><select id="{name}" name="{name}" class="large-text">{options_html}</select>', array(
+		$description = '<ul>';
+		$description .= '<li>';
+		$description .= __( "<strong>Don't forward -</strong> Do not include URL parameters from the referrer when redirecting.", 'linker' );
+		$description .= '</li><li>';
+		$description .= __( '<strong>Forward & Override -</strong> Forward URL parameters while replacing existing ones in the destination URL in case of conflict.', 'linker' );
+		$description .= '</li><li>';
+		$description .= __( '<strong>Forward Without Overriding -</strong> Include new URL parameters without modifying those already present in the destination URL.', 'linker' );
+		$description .= '</li>';
+		$description .= '</ul>';
+
+		echo strtr( '<p><strong><label for="{name}">{label}</label></strong></p><p><select id="{name}" name="{name}" class="large-text">{options_html}</select></p><p class="description">{description}</p>', array(
 			'{label}' => __( 'Forward URL Parameters:', 'linker' ),
 			'{name}'  => $field_id,
 			'{options_html}' => $options_html,
+			'{description}' => $description,
 		) );
 
 		$counter = absint( get_post_meta( $post->ID, '_linker_count', true ) );
