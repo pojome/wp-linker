@@ -3,7 +3,7 @@
 Plugin Name: Linker
 Plugin URI: http://wordpress.org/plugins/linker/
 Description: Manage, create and track outbound links by custom pretty links with your domain.
-Author: Yakir Sitbon, Ariel Klikstein
+Author: Linker Team
 Author URI: http://pojo.me/
 Version: 1.3.0
 Text Domain: linker
@@ -85,13 +85,13 @@ final class Linker_Main {
 	public static function instance() {
 		if ( is_null( self::$_instance ) )
 			self::$_instance = new Linker_Main();
-		
+
 		return self::$_instance;
 	}
-	
+
 	private function __construct() {
 		$this->cpt = new Linker_CPT();
-		
+
 		add_action( 'plugins_loaded', array( &$this, 'load_textdomain' ) );
 	}
 }
