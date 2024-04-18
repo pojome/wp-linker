@@ -77,6 +77,9 @@ Would you like to like to contribute to Linker? You are more than welcome to sub
 
 == Changelog ==
 
+= 1.3.0 =
+* New: Introducing URL Parameters forwarding for improved tracking on every redirection
+
 = 1.2.2 =
 * Security Fix: Add escaping data in the admin area
 
