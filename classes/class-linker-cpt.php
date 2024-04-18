@@ -129,9 +129,9 @@ class Linker_CPT {
 		) );
 
 		$options = array(
-			'' => __( 'No using query params', 'linker' ),
-			'add_n_override' => __( 'Add and override query params', 'linker' ),
-			'add_only' => __( 'Add only query params', 'linker' ),
+			'' => __( 'Don\'t forward', 'linker' ),
+			'add_n_override' => __( 'Forward & Override', 'linker' ),
+			'add_only' => __( 'Forward Without Overriding', 'linker' ),
 		);
 
 		$field_id = '_linker_query_params';
@@ -144,7 +144,7 @@ class Linker_CPT {
 		}
 
 		echo strtr( '<p><strong><label for="{name}">{label}</label></strong></p><p><select id="{name}" name="{name}" class="large-text">{options_html}</select>', array(
-			'{label}' => __( 'Query Params:', 'linker' ),
+			'{label}' => __( 'Forward URL Parameters:', 'linker' ),
 			'{name}'  => $field_id,
 			'{options_html}' => $options_html,
 		) );
