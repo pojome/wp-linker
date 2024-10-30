@@ -3,7 +3,7 @@ Contributors: pojo.me, KingYes, ariel.k
 Tags: 301, click tracking, redirect, shortlinks, link shortener,
 Requires at least: 6.0
 Requires PHP: 7.0
-Tested up to: 6.5
+Tested up to: 6.7
 Stable tag: 1.3.0
 License: GPLv2 or later
 
