@@ -1,5 +1,5 @@
 === Linker - URL shortener & track outbound link clicks ===
-Contributors: pojo.me, KingYes, ariel.k
+Contributors: elemntor, KingYes, ariel.k
 Tags: 301, click tracking, redirect, shortlinks, link shortener,
 Requires at least: 6.0
 Requires PHP: 7.0
